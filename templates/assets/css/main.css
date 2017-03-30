@@ -1,0 +1,486 @@
+html{
+	min-height: 100%;
+	width: 100%;
+}
+body{
+	height: 100%;
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.wrapper{
+	height: 100%;
+	width: 100%;
+	padding: 0px;
+	margin: 0 auto;
+}
+
+body[data="index"] header{
+	/*width: 100%;
+	height: 572px;*/
+	width: 100%;
+    height: 577px;
+    margin: 0 auto;
+  	background-image: linear-gradient(to top, #445482, #49558f);
+  	color: #FFF;
+  	font-family: 
+}
+
+.shapes{
+	
+	width: 1084px;
+	height: 311px;
+	margin: 0px auto 0px auto;
+	background-image: url('../../assets/img/shapes@3x.png');
+	background-size: cover;
+	padding-top: 100px;
+}
+
+.th_4{
+	height: calc(100% - 80px);
+	background: rgba(255, 255, 255, 0.1)
+}
+
+.th_1{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 80px;
+}
+
+h3.title{
+  height: 44px;
+  font-family: Nunito;
+  font-size: 40px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 40px;
+  letter-spacing: 0.8px;
+  color: #ffffff;
+  margin-bottom: 9px;
+}
+
+.introduction{
+  height: 84px;
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.4px;
+  color: #ffffff;
+}
+
+
+.form-inline .form-control{
+	box-shadow: none;
+	min-width: 270px;
+	height: 40px;
+	text-align: left;
+    text-transform: none;
+    border-radius: 4px;
+    background: rgba(255,255,255, 0.95);
+}
+
+.form-inline button{
+	height: 40px;
+	width: 150px;
+}
+
+/*.thumbnail {
+    padding: 4px;
+    margin-bottom: 20px;
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+}*/
+
+section .heading{
+  font-family: Nunito;
+  font-size: 32px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+.hr-blue{
+  color: #37467a;
+}
+
+.hr-white{
+	color: #FFFFFF;
+}
+
+.content h5{
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #37467a;
+}
+
+.content p{
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #4c6078;
+}
+
+section.work{
+	background: #FFFFFF;
+	height: 482px;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+}
+
+section.course{
+  height: 637px;
+  background-image: linear-gradient(to top, #445482, #49558f);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+section.course .card{
+	height: 400px;
+	background: #FFF;
+}
+
+section.course .card .header{
+	height: 140px;
+	border-radius: 2px;
+  	background-image: linear-gradient(to left, #00e1fe, #4facfe);
+}
+
+section.course .card .content{
+	padding: 20px;
+}
+
+section.course .col-md-3{
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+body[data="index"] footer.footer{
+  height: 120px;
+  background-color: #ffffff;
+}
+
+.navbar.navbar-default{
+	border-radius: 0px;
+	background: transparent;
+	color: #FFF;
+	border: none;
+	
+}
+
+body[data="index"] .navbar.navbar-default{
+	height: 120px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+body[data="course"] .navbar.navbar-default{
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+body[data="course"] header{
+	border-bottom: 1px solid #EEE;
+}
+
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus
+{   
+    background-color: transparent;
+    background: transparent;
+}
+
+body[data="index"] .navbar-default .navbar-nav>li>a,
+body[data="index"] .navbar-default .navbar-nav>.active>a,
+body[data="index"] .navbar-default .navbar-nav>li>a:hover,
+body[data="index"] .navbar-default .navbar-nav>li>a:focus, 
+body[data="index"] .navbar-default .navbar-nav>.active>a:hover, 
+body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
+	color: #FFF;
+	font-family: Nunito;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+}
+
+.card .content .course_price{ 
+	margin-top: 20px;
+  font-size: 20px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #778aa1;
+}
+
+.card .content .course_title{
+  opacity: 0.8;
+  font-family: Nunito;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.11;
+  letter-spacing: 0.8px;
+  text-align: center;
+  color: #0e1f5a;
+}
+
+.card .content .course_duration{
+  font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.19;
+  letter-spacing: normal;
+  color: #37467a;
+}
+
+.description h5{
+  font-family: Nunito;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  color: #7e8791;
+}
+
+.description p{
+  font-family: Nunito;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0e1f5a;
+}
+
+.description ul{
+  font-family: Nunito;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0e1f5a;
+}
+
+
+footer .navbar{
+	margin-bottom: 0px;
+}
+
+footer .navbar-default .navbar-nav>li>a:hover, 
+footer .navbar-default .navbar-nav>li>a:focus,
+footer .navbar-default .navbar-nav>.active>a, 
+footer .navbar-default .navbar-nav>.active>a:hover, 
+footer .navbar-default .navbar-nav>.active>a:focus
+ {
+    background-color: transparent;
+}
+
+.navbar-brand {
+   padding: 0px !important;
+}
+
+.navbar-brand img{
+	width: 150px !important;
+}
+
+.dis-flex{
+	display: flex;
+	align-items: center;
+	align-content: center;
+	justify-content: center;
+}
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+    outline: 0;
+}
+
+/*Margin */
+.m-b-0{
+	margin-bottom: 0px;
+}
+.m-t-0{
+	margin-top: 0px;
+}
+
+.m-t-20{
+	margin-top: 20px;
+}
+
+.m-t-80{
+	margin-top: 80px;
+}
+
+.p-l-0{
+	padding-left: 0px;
+}
+
+.p-t-60{
+	padding-top: 60px;
+}
+
+.intros .card .header{
+	height: 197px;
+	border-radius: 2px;
+  	background-image: linear-gradient(to left, #00e1fe, #4facfe);	
+}
+
+.footer ul{
+	list-style-type: none;
+}
+
+.footer ul li{
+	display: inline-block;
+}
+
+.footer ul li a{
+	text-transform: uppercase;
+	text-decoration: none;
+	display: block;
+	padding: 10px 20px;
+	font-family: Nunito;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: normal;
+  text-align: right;
+  color: #4f4f4f;
+  letter-spacing: 0.4px;
+}
+
+.copyright{
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #bdc6cf;
+  margin-left: 10px;
+}
+
+.btn_brand{
+  font-weight: 400;
+  color: #0e1f5a;
+  border-radius: 2px;
+  background-color: #fecb3f;
+  font-size: 16px;
+}
+
+.btn_brand:hover,
+.btn_brand:active,
+.btn_brand:visited,
+.btn_brand:focus
+{
+	outline: 0;
+	color: #0e1f5a;
+}
+.btn_enroll{
+	width: 204px;
+    height: 42px
+}
+
+ul.inline_block{
+	list-style-type: none;
+	padding-left: 0px;
+}
+.inline_block li{
+	display: inline-block;
+}
+
+.width-100p{
+	width: 100%;
+}
+
+.bank_details{
+	border-radius: 2.5px;
+	background-color: #ffffff;
+	border: solid 0.5px #e2e5e7;
+	padding: 10px;
+}
+
+.enroll_title{
+  opacity: 0.8;
+  font-family: Nunito;
+  font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 2.22;
+  letter-spacing: 0.4px;
+  color: #0e1f5a;
+}
+
+.enrollment p{
+	font-family: Nunito;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.2px;
+  text-align: center;
+  color: #4c6078;
+}
+
+.enrollment .friend{
+  font-family: Nunito;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  color: #4c6078;
+}
+
+.social_button a:nth-child(1){
+  width: 122px;
+  border-radius: 2px;
+  background-color: #00aaec;
+  color: #FFF;
+}
+
+.social_button a:nth-child(2){
+  width: 122px;
+  border-radius: 2px;
+  background-color: #4460a0;
+  color: #FFF;
+}

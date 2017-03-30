@@ -52,19 +52,34 @@
 							<h3 class="m-t-0">FrontEnd Development</h3>
 							<form>
 								<div class="row">
-								
-									<div class="col-md-7">
-										
-									    <label class="control-label">Select a payment method</label>
-									   
+									<div class="col-md-6">
 										<div class="form-group">
-										    <label class="radio-inline"><input type="radio" name="method">Bank Transfer</label>
-											<label class="radio-inline"><input type="radio" name="method" onclick="payWithPaystack('superirale@gmail.com', 1000, '2asdjkssssdkj')">ATM Card</label>
+										    <label for="email">Email address:</label>
+										    <input type="email" class="form-control" id="email">
 										</div>
 									</div>
-									<div class="col-md-7">
+									<div class="col-md-6">
 										<div class="form-group">
-										    <select class="selectpicker form-control" title="Choose Your Preferred Bank" name="range">
+										    <label for="email">Email address:</label>
+										    <input type="email" class="form-control" id="email">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="email">Email address:</label>
+										    <input type="email" class="form-control" id="email">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="email">Email address:</label>
+										    <input type="email" class="form-control" id="email">
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="range">What is your age range</label>
+										    <select class="selectpicker form-control" title="Choose a course..." name="range">
 								  			  <option>Frontend Development</option>
 											  <option>Backend Development</option>
 											  <option>Product Design</option>
@@ -72,29 +87,72 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-7">
-										<div class="clearfix text-center bank_details">
-										    <img src="/assets/img/gtb.png">
-										    <h6><strong>Guaranty Trust Bank</strong></h6>
-										    <ul class="inline_block m-b-0">
-										    	<li class="width-100p">
-										    		<span class="pull-left">Account name:</span> 
-										    		<span class="pull-right">Switch Nigeria</span>
-										    	</li>
-										    	<li class="width-100p">
-										    		<span class="pull-left">Account Number:</span> 
-										    		<span class="pull-right">0035429295</span>
-										    	</li>
-										    </ul>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="tsection">Prefer Training Section</label>
+										    <select class="selectpicker form-control" title="Choose a course..." name="tsection">
+								  			  <option>Frontend Development</option>
+											  <option>Backend Development</option>
+											  <option>Product Design</option>
+											  <option>Android Development</option>
+											</select>
 										</div>
 									</div>
-									<div class="col-md-5">
-										<div class="clearfix">
-										    <p>Note: Please include the following code int the comment section when making payment: <b>SWITCHFED24<b></p>
+									<div class="col-md-12">
+										<div class="form-group">
+										    <label for="tsection">Prefer Training Section</label>
+										    <textarea name="tsection" id="tsection" class="form-control" rows="3" required="required"></textarea>
 										</div>
 									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="tsection">Prefer Training Section</label>
+										    <select class="selectpicker form-control" title="Choose a course..." name="tsection">
+								  			  <option>Frontend Development</option>
+											  <option>Backend Development</option>
+											  <option>Product Design</option>
+											  <option>Android Development</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="tsection">Prefer Training Section</label>
+										    <select class="selectpicker form-control" title="Choose a course..." name="tsection">
+								  			  <option>Frontend Development</option>
+											  <option>Backend Development</option>
+											  <option>Product Design</option>
+											  <option>Android Development</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="tsection">Prefer Training Section</label>
+										    <select class="selectpicker form-control" title="Choose a course..." name="tsection">
+								  			  <option>Frontend Development</option>
+											  <option>Backend Development</option>
+											  <option>Product Design</option>
+											  <option>Android Development</option>
+											</select>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="form-group">
+										    <label for="tsection">Prefer Training Section</label>
+										    <select class="selectpicker form-control" title="Choose a course..." name="tsection">
+								  			  <option>Frontend Development</option>
+											  <option>Backend Development</option>
+											  <option>Product Design</option>
+											  <option>Android Development</option>
+											</select>
+										</div>
+									</div>
+									
+									
+									
 								</div>
-								<div class="clearfix m-t-20">
+								<div>
 									<button type="submit" class="btn btn-default pull-left">
 										Back
 									</button>
@@ -128,8 +186,7 @@
 				</div>
 			</section>
 		</div>
-        <script src="https://js.paystack.co/v1/inline.js"></script>
-        <script src="/js/payment.js"></script>
+
 		<!-- jQuery -->
 		<script src="/assets/js/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->

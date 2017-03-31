@@ -1,0 +1,115 @@
+@media only screen and (max-width: 475px){
+	header .form-inline{
+		width: 80%;
+	}
+
+	.form-inline .objective{
+		font-size: 20px;
+	}
+
+	.form-inline button {
+	    width: 100%;
+    }
+    .form-inline div:nth-child(1){
+    	margin-top: 15px;
+    }
+/*course */
+   body[data="course"] .container{
+   	width: 100% !important;
+   }
+   .card .content .course_title, .intros .course_title{
+   	   font-size: 24px;
+   }
+   .card .content .course_price {
+    	font-size: 16px;
+   }
+   .description h5 {
+    	font-size: 18px;
+    }
+    .description p,
+    .description ul
+    {
+    	font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 991px)
+{
+	.navbar-default .navbar-toggle {
+	    border-color: none;
+	    border: none;
+	}
+
+	body[data="index"] .navbar-default .navbar-toggle .icon-bar
+	{
+	    background-color: #FFF !important;
+	    background: #FFF !important;
+	}
+	.navbar-default .navbar-toggle:hover, 
+	.navbar-default .navbar-toggle:focus{
+		background: transparent !important;
+		background-color: transparent !important;
+	}
+
+	body[data="index"] header,
+	.th_1, .th_4,section.work,section.course,
+	body[data="index"] footer.footer,h3.title,
+	.introduction
+	{
+		height: auto !important;  
+	}
+
+	.th_4{
+		padding-bottom: 20px;
+	}
+	.th_1{
+		padding: 40px 20px;
+	}
+
+	.shapes{
+		width: auto !important;
+		height: 350px;
+	}
+
+	.introduction{
+		font-size: 14px;
+	}
+	
+    section.work,section.course{
+    	padding-top: 30px;
+    }
+	.card{
+		margin-bottom: 30px;
+	}
+	section.course .card .header {
+    	height: 200px;
+   }
+   section.course .card .content {
+    	height: calc(100% - 200px);
+   }
+    body[data="index"] footer.footer > .container  ul{
+    	padding-left: 0px;
+    	text-align: center;
+    	float: none !important;
+    	height: 100%;
+    	margin-bottom: 0px;
+    }
+   body[data="index"] footer.footer > .container > ul > li:first-child{
+   		display: none;
+   }
+   /*course styling contents here */
+   body[data="course"] .container{
+   	width: 100% !important;
+   }
+   body[data="course"] header .container{
+   	width: 100% !important;
+   }
+
+   body[data="course"] .card{
+   	margin-top: 20px;
+   }
+   .payment_method label {
+    width: 160px;
+    margin-bottom: 10px;
+   }
+}

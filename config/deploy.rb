@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.6.1'
 
-set :application, 'sarelo'
+set :application, 'SwitchCourses'
 set :repo_url, 'git@gitlab.com:switchElites/switch-courses.git'
 
 # Default branch is :master

@@ -13,6 +13,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
 	</head>
 	<body data="course">
 		<div class="wrapper clearfix">

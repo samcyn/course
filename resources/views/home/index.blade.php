@@ -12,6 +12,7 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 		<link rel="stylesheet" type="text/css" href="https://fonts.google.com/?query=nuni&selection.family=Nunito">
 	</head>
 	<body data="index">

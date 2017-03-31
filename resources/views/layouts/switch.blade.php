@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
 	</head>
 	<body data="course">
-		<div class="wrapper clearfix">
+		<div class="wrapper clearfix m-b-80">
 			<header class="clearfix dis-flex">
 				<div class="container">
 					<!--navbar begins here-->

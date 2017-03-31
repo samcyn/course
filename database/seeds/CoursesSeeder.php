@@ -82,11 +82,15 @@ class CoursesSeeder extends Seeder
                     'short_desc' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita odit adipisci eum ad ea sit explicabo quidem quibusdam ipsum exercitationem dolorem quaerat cumque.'
                 ]
             ];
+            
+            $all_courses = Course::all();
 
-        foreach ($courses as $course) {
-            Course::create($course);
-        }
+            if(!$all_courses){
 
+                 foreach ($courses as $course) {
+                    Course::create($course);
+                }
 
+            }
     }
 }

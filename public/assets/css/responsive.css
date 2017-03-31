@@ -1,4 +1,4 @@
-@media only screen and (max-width: 475px){
+@media only screen and (max-width: 575px){
 	header .form-inline{
 		width: 80%;
 	}
@@ -13,6 +13,8 @@
     .form-inline div:nth-child(1){
     	margin-top: 15px;
     }
+
+    
 /*course */
    body[data="course"] .container{
    	width: 100% !important;
@@ -54,13 +56,13 @@
 	body[data="index"] header,
 	.th_1, .th_4,section.work,section.course,
 	body[data="index"] footer.footer,h3.title,
-	.introduction
+	.introduction, section.course .card
 	{
 		height: auto !important;  
 	}
 
 	.th_4{
-		padding-bottom: 20px;
+		padding-bottom: 50px;
 	}
 	.th_1{
 		padding: 40px 20px;
@@ -74,6 +76,7 @@
 	.introduction{
 		font-size: 14px;
 	}
+
 	
     section.work,section.course{
     	padding-top: 30px;
@@ -111,5 +114,13 @@
    .payment_method label {
     width: 160px;
     margin-bottom: 10px;
+   }
+
+
+}
+
+@media only screen and (min-width: 992px){
+	.form-inline .form-control{
+   	  min-width: 270px;
    }
 }

@@ -5,6 +5,57 @@
 					<section class="intros clearfix p-t-60">
 						<div class="col-md-7">
 							<h3 class="m-t-0">{{$course->name}}</h3>
+							<!--wizard here-->
+							<div class="wizard">
+								<div class="wizard-inner">
+					               
+					                <ul class="nav nav-tabs">
+
+					                    <li role="presentation" >
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-brand">
+					                                	<i class="fa fa-check"></i>
+					                                </span>
+					                                Select Course
+					                            </span>
+					                        </a>
+					                    </li>
+
+					                    <li role="presentation" class="active">
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-transparent">
+					                                    2
+					                                </span>
+					                                Personal Information
+					                            </span>
+					                        </a>
+					                    </li>
+					                    <li role="presentation" >
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-transparent">3</span>
+					                                Make Payment
+					                            </span>
+					                        </a>
+					                    </li>
+
+					                    <li role="presentation">
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-transparent">4</span>
+					                                Complete
+					                            </span>
+					                        </a>
+					                    </li>
+					                </ul>
+					            </div>
+				            </div>
+
+							<!-- wizard ended -->
+							<p class="fellow_info">Please take some time and provide some background information about yourself</p>
+							<br>
 							<form method="post">
 								{{csrf_field()}}
 								<div class="row">

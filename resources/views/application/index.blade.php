@@ -156,7 +156,7 @@
 									
 									
 								</div>
-								<div>
+								<div class="clearfix">
 									<a href="/courses/{{$course->slug}}" type="submit" class="btn btn-default pull-left">
 										Back
 									</a>

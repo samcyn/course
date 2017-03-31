@@ -1749,3 +1749,99 @@ remote: Compressing objects:   0% (1/209)   [Kremote: Compressing objects:   1
   INFO [7502fc5f] Running /usr/bin/env echo "Branch master (at 0550cc3d61a229a828c50f773d3bd707fffbb3e8) deployed as release 20170331162107 by usmanirale" >> /var/www/html/courses/revisions.log as root@104.131.168.249
  DEBUG [7502fc5f] Command: cd /var/www/html/courses/releases && /usr/bin/env echo "Branch master (at 0550cc3d61a229a828c50f773d3bd707fffbb3e8) deployed as release 20170331162107 by usmanirale" >> /var/www/html/courses/revisions.log
   INFO [7502fc5f] Finished in 0.874 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-31 17:39:17 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [9d2b5b64] Running /usr/bin/env mkdir -p /tmp as root@104.131.168.249
+ DEBUG [9d2b5b64] Command: /usr/bin/env mkdir -p /tmp
+  INFO [9d2b5b64] Finished in 14.935 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SwitchCourses-production-usmanirale.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SwitchCourses-production-usmanirale.sh 100.0%
+  INFO [cf838bd3] Running /usr/bin/env chmod 700 /tmp/git-ssh-SwitchCourses-production-usmanirale.sh as root@104.131.168.249
+ DEBUG [cf838bd3] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SwitchCourses-production-usmanirale.sh
+  INFO [cf838bd3] Finished in 2.835 seconds with exit status 0 (successful).
+  INFO [523b2aa1] Running /usr/bin/env git ls-remote --heads git@gitlab.com:switchElites/switch-courses.git as root@104.131.168.249
+ DEBUG [523b2aa1] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git ls-remote --heads git@gitlab.com:switchElites/switch-courses.git )
+ DEBUG [523b2aa1] 	418fcbf7c70fd2281b4c831782127ccd91f37f92
+ DEBUG [523b2aa1] 		refs/heads/master
+  INFO [523b2aa1] Finished in 16.935 seconds with exit status 0 (successful).
+  INFO [98e9e8ab] Running /usr/bin/env mkdir -p /var/www/html/courses/shared /var/www/html/courses/releases as root@104.131.168.249
+ DEBUG [98e9e8ab] Command: /usr/bin/env mkdir -p /var/www/html/courses/shared /var/www/html/courses/releases
+  INFO [98e9e8ab] Finished in 6.818 seconds with exit status 0 (successful).
+ DEBUG [72ac253e] Running [ -f /var/www/html/courses/current/REVISION ] as root@104.131.168.249
+ DEBUG [72ac253e] Command: [ -f /var/www/html/courses/current/REVISION ]
+ DEBUG [72ac253e] Finished in 5.056 seconds with exit status 0 (successful).
+ DEBUG [e65e3334] Running /usr/bin/env cat /var/www/html/courses/current/REVISION 2>/dev/null as root@104.131.168.249
+ DEBUG [e65e3334] Command: /usr/bin/env cat /var/www/html/courses/current/REVISION 2>/dev/null
+ DEBUG [e65e3334] 	0550cc3d61a229a828c50f773d3bd707fffbb3e8
+ DEBUG [e65e3334] 	
+ DEBUG [e65e3334] Finished in 10.343 seconds with exit status 0 (successful).
+ DEBUG [6a775511] Running [ -f /var/www/html/courses/repo/HEAD ] as root@104.131.168.249
+ DEBUG [6a775511] Command: [ -f /var/www/html/courses/repo/HEAD ]
+ DEBUG [6a775511] Finished in 9.254 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/html/courses/repo
+ DEBUG [fe0719e4] Running if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [fe0719e4] Command: if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi
+ DEBUG [fe0719e4] Finished in 3.356 seconds with exit status 0 (successful).
+  INFO [55df823f] Running /usr/bin/env git remote update --prune as root@104.131.168.249
+ DEBUG [55df823f] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [55df823f] 	Fetching origin
+ DEBUG [55df823f] 	
+ DEBUG [55df823f] 	remote: Counting objects: 8, done.[K
+ DEBUG [55df823f] 	
+ DEBUG [55df823f] 	remote: Compressing objects:  16% (1/6)   [K
+ DEBUG [55df823f] 	remote: Compressing objects:  33% (2/6)   [K
+ DEBUG [55df823f] 	remote: Compressing objects:  50% (3/6)   [K
+ DEBUG [55df823f] 	remote: Compressing objects:  66% (4/6)   [K
+ DEBUG [55df823f] 	remote: Compressing objects:  83% (5/6)   [K
+ DEBUG [55df823f] 	remote: Compressing objects: 100% (6/6)   [K
+ DEBUG [55df823f] 	remote: Compressing objects: 100% (6/6), done.[K
+ DEBUG [55df823f] 	
+ DEBUG [55df823f] 	remote: Total 8 (delta 5), reused 0 (delta 0)[K
+ DEBUG [55df823f] 	
+ DEBUG [55df823f] 	Unpacking objects:  12% (1/8)   
+ DEBUG [55df823f] 	Unpacking objects:  25% (2/8)   
+ DEBUG [55df823f] 	Unpacking objects:  37% (3/8)   
+ DEBUG [55df823f] 	Unpacking objects:  50% (4/8)   
+ DEBUG [55df823f] 	Unpacking objects:  62% (5/8)   
+ DEBUG [55df823f] 	Unpacking objects:  75% (6/8)   
+ DEBUG [55df823f] 	Unpacking objects:  87% (7/8)   
+ DEBUG [55df823f] 	Unpacking objects: 100% (8/8)   
+ DEBUG [55df823f] 	Unpacking objects: 100% (8/8), done.
+ DEBUG [55df823f] 	
+ DEBUG [55df823f] 	From gitlab.com:switchElites/switch-courses
+ DEBUG [55df823f] 	
+ DEBUG [55df823f] 	   0550cc3..418fcbf  master     -> master
+ DEBUG [55df823f] 	
+  INFO [55df823f] Finished in 14.847 seconds with exit status 0 (successful).
+ DEBUG [6036e7d2] Running if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [6036e7d2] Command: if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi
+ DEBUG [6036e7d2] Finished in 12.081 seconds with exit status 0 (successful).
+  INFO [9774bf68] Running /usr/bin/env mkdir -p /var/www/html/courses/releases/20170331164059 as root@104.131.168.249
+ DEBUG [9774bf68] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env mkdir -p /var/www/html/courses/releases/20170331164059 )
+  INFO [9774bf68] Finished in 9.060 seconds with exit status 0 (successful).
+  INFO [d77341f1] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/html/courses/releases/20170331164059 as root@104.131.168.249
+ DEBUG [d77341f1] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/html/courses/releases/20170331164059 )
+  INFO [d77341f1] Finished in 3.129 seconds with exit status 0 (successful).
+ DEBUG [a1c8212f] Running if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [a1c8212f] Command: if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi
+ DEBUG [a1c8212f] Finished in 15.047 seconds with exit status 0 (successful).
+ DEBUG [975d4cda] Running /usr/bin/env git rev-list --max-count=1 master as root@104.131.168.249
+ DEBUG [975d4cda] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [975d4cda] 	418fcbf7c70fd2281b4c831782127ccd91f37f92
+ DEBUG [975d4cda] 	
+ DEBUG [975d4cda] Finished in 3.159 seconds with exit status 0 (successful).
+ DEBUG [f74b3fca] Running if test ! -d /var/www/html/courses/releases/20170331164059; then echo "Directory does not exist '/var/www/html/courses/releases/20170331164059'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [f74b3fca] Command: if test ! -d /var/www/html/courses/releases/20170331164059; then echo "Directory does not exist '/var/www/html/courses/releases/20170331164059'" 1>&2; false; fi
+ DEBUG [f74b3fca] Finished in 2.440 seconds with exit status 0 (successful).
+  INFO [8ee55f1b] Running /usr/bin/env echo "418fcbf7c70fd2281b4c831782127ccd91f37f92" >> REVISION as root@104.131.168.249
+ DEBUG [8ee55f1b] Command: cd /var/www/html/courses/releases/20170331164059 && /usr/bin/env echo "418fcbf7c70fd2281b4c831782127ccd91f37f92" >> REVISION
+  INFO [8ee55f1b] Finished in 3.029 seconds with exit status 0 (successful).
+ DEBUG [7d542ece] Running if test ! -d /var/www/html/courses/releases/20170331164059; then echo "Directory does not exist '/var/www/html/courses/releases/20170331164059'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [7d542ece] Command: if test ! -d /var/www/html/courses/releases/20170331164059; then echo "Directory does not exist '/var/www/html/courses/releases/20170331164059'" 1>&2; false; fi
+ DEBUG [7d542ece] Finished in 2.927 seconds with exit status 0 (successful).
+  INFO [1879168a] Running cp /var/www/html/courses/releases/20170331164059/.env.example /var/www/html/courses/releases/20170331164059/.env as root@104.131.168.249
+ DEBUG [1879168a] Command: cp /var/www/html/courses/releases/20170331164059/.env.example /var/www/html/courses/releases/20170331164059/.env
+  INFO [1879168a] Finished in 4.026 seconds with exit status 0 (successful).
+  INFO [12706bf7] Running /usr/bin/env composer install as root@104.131.168.249
+ DEBUG [12706bf7] Command: cd /var/www/html/courses/releases/20170331164059 && /usr/bin/env composer install

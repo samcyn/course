@@ -205,9 +205,8 @@
 			$(document).ready(function(){
 				$("input[type='radio']").on("change", function(){
 					//console.log($(this).parent());
-					if ($(this).attr("checked", "checked")) {
-						$(this).parent().addClass("current");
-					}
+					$(".payment_method").find(".current").removeClass("current");
+					$(this).parent().addClass("current");
 					
 				});
 			});

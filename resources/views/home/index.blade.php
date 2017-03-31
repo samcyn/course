@@ -50,7 +50,7 @@
 						<div class="shapes clearfix">
 							<div class="col-md-12">
 								<h3 class="title">SWITCH! Immersive Courses</h3>
-								<p class="introduction">It's time to SWITCH! Accelerate your career by taking our<br> immersive courses in web technologies. A good way to start a new<br> career or expand your skill-set.Type something</p>
+								<p class="introduction">It's time to SWITCH! Accelerate your career by taking our<br> immersive courses in web technologies. A good way to start a new<br> career or expand your skill-set.</p>
 							</div>
 							<!--<div class="col-md-6">
 								<div class="thumbnail">
@@ -61,16 +61,17 @@
 					</div>
 				</div>
 				<div class="th_1">
-					<form class="form-inline">
+					<form class="form-inline" method="post">
 					  <span>I want to learn </span>
 					  <div class="form-group">
 					    <!--<select class="form-control">
 					    	<option>1</option>
 					    	<option>1</option>
 					    </select>-->
+						{{csrf_field()}}
 					    <select name="course_id" class="selectpicker form-control" title="Choose a course...">
 						  @foreach($courses as $course)
-						  	<option value="{{ $course->id }}"> {{ $course->name }}</option>
+						  	<option value="{{ $course->slug }}"> {{ $course->name }}</option>
 						  @endforeach
 						</select>
 

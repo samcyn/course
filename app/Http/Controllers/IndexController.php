@@ -28,6 +28,8 @@ class IndexController extends Controller
             'email' => 'required|min:10'
         ]);
 
-        return redirect('/courses/'.$request->course_slug.'/apply')->withInput($request->all());
+        $course = $this->course->getCourse($request->course_id);
+       
+        return redirect('/courses/'.$course->slug)->withInput($request->all());
     }
 }

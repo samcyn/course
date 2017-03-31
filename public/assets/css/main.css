@@ -3,6 +3,7 @@ html{
 	width: 100%;
 }
 body{
+	font-family: 'Nunito', sans-serif;
 	height: 100%;
 	width: 100%;
 	margin: 0px;
@@ -52,7 +53,7 @@ body[data="index"] header{
 
 h3.title{
   height: 44px;
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 40px;
   font-weight: bold;
   font-style: normal;
@@ -65,7 +66,7 @@ h3.title{
 
 .introduction{
   height: 84px;
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
@@ -100,7 +101,7 @@ h3.title{
 }*/
 
 section .heading{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 32px;
   font-weight: 600;
   font-style: normal;
@@ -118,7 +119,7 @@ section .heading{
 }
 
 .content h5{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 20px;
   font-weight: 500;
   font-style: normal;
@@ -129,7 +130,7 @@ section .heading{
 }
 
 .content p{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -223,7 +224,7 @@ body[data="index"] .navbar-default .navbar-nav>li>a:focus,
 body[data="index"] .navbar-default .navbar-nav>.active>a:hover, 
 body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
 	color: #FFF;
-	font-family: Nunito;
+	font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-weight: 500;
   font-style: normal;
@@ -242,10 +243,29 @@ body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
   color: #778aa1;
 }
 
-.card .content .course_title{
+.card .content .course_title,
+.intros .course_title
+{
   opacity: 0.8;
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 36px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.11;
+  letter-spacing: 0.8px;
+  
+  color: #0e1f5a;
+}
+
+.card .content .course_title{
+   text-align: center;
+}
+
+.card .content .course_title2{
+	opacity: 0.8;
+  font-family: 'Nunito', sans-serif;
+  font-size: 24px;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -256,7 +276,7 @@ body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
 }
 
 .card .content .course_duration{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -267,7 +287,7 @@ body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
 }
 
 .description h5{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 24px;
   font-weight: normal;
   font-style: normal;
@@ -278,7 +298,7 @@ body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
 }
 
 .description p{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 20px;
   font-weight: normal;
   font-style: normal;
@@ -289,7 +309,7 @@ body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
 }
 
 .description ul{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 18px;
   font-weight: normal;
   font-style: normal;
@@ -348,12 +368,27 @@ footer .navbar-default .navbar-nav>.active>a:focus
 	margin-top: 80px;
 }
 
+.m-b-80{
+	margin-bottom: 80px;
+}
+
+
 .p-l-0{
 	padding-left: 0px;
 }
 
 .p-t-60{
 	padding-top: 60px;
+}
+.w-104{
+	min-width: 104px;
+}
+
+.w-210{
+	min-width: 210px;
+}
+.align-justify{
+	text-align: justify;
 }
 
 .intros .card .header{
@@ -375,7 +410,7 @@ footer .navbar-default .navbar-nav>.active>a:focus
 	text-decoration: none;
 	display: block;
 	padding: 10px 20px;
-	font-family: Nunito;
+	font-family: 'Nunito', sans-serif;
   font-weight: 500;
   font-style: normal;
   font-stretch: normal;
@@ -386,7 +421,7 @@ footer .navbar-default .navbar-nav>.active>a:focus
 }
 
 .copyright{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
   font-weight: normal;
   font-style: normal;
@@ -398,7 +433,7 @@ footer .navbar-default .navbar-nav>.active>a:focus
 }
 
 .btn_brand{
-  font-weight: 400;
+  font-weight: 600;
   color: #0e1f5a;
   border-radius: 2px;
   background-color: #fecb3f;
@@ -416,6 +451,20 @@ footer .navbar-default .navbar-nav>.active>a:focus
 .btn_enroll{
 	width: 204px;
     height: 42px
+}
+
+.bg-brand{
+	background-color: #fecb3f !important;
+	background: #fecb3f !important;
+	color: #222 !important;
+
+}
+
+.bg-transparent{
+	background: transparent !important;
+	background-color: transparent !important;
+	border: 1px solid #DDD;
+	color: #222 !important;
 }
 
 ul.inline_block{
@@ -439,7 +488,7 @@ ul.inline_block{
 
 .enroll_title{
   opacity: 0.8;
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 36px;
   font-weight: 500;
   font-style: normal;
@@ -450,7 +499,7 @@ ul.inline_block{
 }
 
 .enrollment p{
-	font-family: Nunito;
+	font-family: 'Nunito', sans-serif;
   font-size: 16px;
   font-weight: normal;
   font-style: normal;
@@ -462,7 +511,7 @@ ul.inline_block{
 }
 
 .enrollment .friend{
-  font-family: Nunito;
+  font-family: 'Nunito', sans-serif;
   font-size: 14px;
   font-weight: 500;
   font-style: normal;
@@ -483,4 +532,173 @@ ul.inline_block{
   border-radius: 2px;
   background-color: #4460a0;
   color: #FFF;
+}
+
+/*styling of progress*/
+	.wizard {
+    margin: 20px auto;
+    background: #fff;
+}
+
+    .wizard .nav-tabs {
+        position: relative;
+        margin: 40px auto;
+        margin-bottom: 0;
+        border-bottom-color: #e0e0e0;
+    }
+
+    .wizard > div.wizard-inner {
+        position: relative;
+    }
+
+
+.wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
+    color: #555555;
+    cursor: default;
+    border: 0;
+    border-bottom-color: transparent;
+}
+
+
+
+
+.wizard .nav-tabs > li {
+    width: 25%;
+}
+
+.wizard li:after {
+    content: " ";
+    position: absolute;
+    opacity: 0;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 2px solid  #fecb3f;
+    border-bottom-color: #fecb3f;
+    transition: 0.1s ease-in-out;
+    width: 100%;
+}
+
+.wizard li.active:after {
+    content: " ";
+    position: absolute;
+    opacity: 1;
+    margin: 0 auto;
+    bottom: 0px;
+    border: 2px solid transparent;
+    border-bottom-color: #fecb3f;
+}
+
+.wizard .nav-tabs > li a {
+    font-size: 12px;
+    height: 40px;
+    margin: 0px auto;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+   font-weight: 500;
+   font-style: normal;
+   font-stretch: normal;
+   color: #3a405b;
+   display: flex;
+    align-items: center;
+}
+
+.wizard .nav-tabs > li a:hover, .nav-tabs>li>a:hover,
+.nav>li>a:hover, .nav>li>a:focus
+{
+    background: transparent;
+    outline: 0;
+    border: none;
+}
+
+.wizard .tab-pane {
+    position: relative;
+    padding-top: 50px;
+}
+
+.wizard h3 {
+    margin-top: 0;
+}
+
+@media( max-width : 585px ) {
+
+    .wizard {
+        width: 90%;
+        height: auto !important;
+    }
+
+    .wizard .nav-tabs > li a {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .wizard li.active:after {
+        content: " ";
+        position: absolute;
+        left: 35%;
+    }
+}
+
+.badge{
+	width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    padding: 3px 0px 0px 0px;
+    margin-right: 5px;
+}
+
+/*form-control */
+.form-group label{
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #4c6078;
+}
+
+.form-control, .form-control:hover, .form-control:focus{
+	outline: 0;
+	box-shadow: none;
+  border-radius: 2px;
+  background-color: #ffffff;
+  border: solid 0.5px #bec6cd;
+}
+
+/*payment method*/
+.payment_method input[type="radio"]{
+	display: none;
+}
+
+.payment_method label{
+	padding-left: 0px;
+	width: 180px;
+	height: 38px;
+	background: #FFF;
+	padding: 6px 12px;
+	border-radius: 2px;
+	text-align: center;
+}
+
+.payment_method label{
+	border: 1px solid #fecb3f;
+}
+
+.payment_method label:nth-child(2){
+  background-color: #f8f5f5;
+  border: solid 0.5px #e2e5e7;
+}
+
+
+.fellow_info{
+	font-family: Nunito;
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #0e1f5a;
 }

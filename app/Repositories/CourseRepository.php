@@ -19,9 +19,9 @@ class CourseRepository implements CourseInterface
         return $this->course->all();
     }
 
-    public function getCourse($id)
+    public function getCourse($slug)
     {
-        return $this->course->find($id);
+        return $this->course->where('slug', $slug)->first();
     }
     
     public function saveCourse($data = [])

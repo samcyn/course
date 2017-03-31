@@ -10,7 +10,7 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
 		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="https://fonts.google.com/?query=nuni&selection.family=Nunito">
 	</head>
@@ -31,7 +31,7 @@
 										<span class="icon-bar"></span>
 									</button>
 									<a class="navbar-brand animated" href="index.html">
-										<img src="assets/img/logo/logo.svg" alt="Switch" class="logo-default">
+										<img src="/assets/img/logo/logo.svg" alt="Switch" class="logo-default">
 									</a>
 								</div>
 
@@ -67,11 +67,10 @@
 					    	<option>1</option>
 					    	<option>1</option>
 					    </select>-->
-					    <select class="selectpicker form-control" title="Choose a course...">
-						  <option>Frontend Development</option>
-						  <option>Backend Development</option>
-						  <option>Product Design</option>
-						  <option>Android Development</option>
+					    <select name="course_id" class="selectpicker form-control" title="Choose a course...">
+						  @foreach($courses as $course)
+						  	<option value="{{ $course->id }}"> {{ $course->name }}</option>
+						  @endforeach
 						</select>
 
 					  </div>
@@ -101,7 +100,7 @@
 						<div class="col-md-4">
 							<div class="card">
 	                            <div class="header">
-	                                <img src="assets/img/chat.png">
+	                                <img src="/assets/img/chat.png">
 	                            </div>
 	                            <div class="content">
 	                                <h5>Complete hands-on projects</h5>
@@ -112,7 +111,7 @@
 						<div class="col-md-4">
 							<div class="card">
 	                            <div class="header">
-	                                <img src="assets/img/bag.png">
+	                                <img src="/assets/img/bag.png">
 	                            </div>
 	                            <div class="content">
 	                                <h5>Complete hands-on projects</h5>
@@ -128,56 +127,23 @@
 					<h3 class="text-center heading hr-white">Our Immersive Courses</h3>
 					<br><br>
 					<div class="row">
+						
+						@foreach($courses as $course)
+						
 						<div class="col-md-3">
 							<div class="card">
 	                            <div class="header text-center dis-flex">
-	                                <img src="assets/img/course_1.png">
+	                                <img src="/assets/img/{{$course->image_reference}}">
 	                            </div>
 	                            <div class="content">
-	                                <h5 class="text-center">Frontend Development</h5>
-	                                <p class="text-center">
-	                                	Research in advertising is done in order to produce better advertisements that are more efficient in motivating customers to buy a product or a service. 
-	                                </p>
-	                                <button class="btn btn-block btn_brand">view course</button>
+	                                <h5 class="text-center">{{$course->name}}</h5>
+	                                <p class="text-center">{{$course->short_desc}}</p>
+	                                <a href="/courses/{{$course->slug}}" class="btn btn-block btn_brand">view course</a>
 	                            </div>
 	                       </div>
 						</div>
-						<div class="col-md-3">
-							<div class="card">
-	                            <div class="header text-center dis-flex">
-	                                <img src="assets/img/course_2.png">
-	                            </div>
-	                            <div class="content">
-	                                <h5 class="text-center">Backend Development</h5>
-	                                <p class="text-center">Research in advertising is done in order to produce better advertisements that are more efficient in motivating customers to buy a product or a service.</p>
-	                                <button class="btn btn-block btn_brand">view course</button>
-	                            </div>
-	                       </div>
-						</div>
-						<div class="col-md-3">
-							<div class="card">
-	                            <div class="header text-center dis-flex">
-	                                <img src="assets/img/course_3.png">
-	                            </div>
-	                            <div class="content">
-	                                <h5 class="text-center">Product Design</h5>
-	                                <p class="text-center">Research in advertising is done in order to produce better advertisements that are more efficient in motivating customers to buy a product or a service.</p>
-	                                <button class="btn btn-block btn_brand">view course</button>
-	                            </div>
-	                       </div>
-						</div>
-						<div class="col-md-3">
-							<div class="card">
-	                            <div class="header text-center dis-flex">
-	                                <img src="assets/img/course_4.png">
-	                            </div>
-	                            <div class="content">
-	                                <h5 class="text-center">Android Development</h5>
-	                                <p class="text-center">Research in advertising is done in order to produce better advertisements that are more efficient in motivating customers to buy a product or a service.</p>
-	                                <button class="btn btn-block btn_brand">view course</button>
-	                            </div>
-	                       </div>
-						</div>
+					
+						@endforeach
 					</div>
 				</div>
 			</section>
@@ -186,7 +152,7 @@
 					<!--navbar begins here-->
 					<ul class="p-l-0">
 						<li>
-							<img src="assets/img/logo/logo.svg" width="150px">
+							<img src="/assets/img/logo/logo.svg" width="150px">
 							<span class="copyright">© 2016 Great Simple All rights reserved</span>
 						</li>
 						<ul class="pull-right">
@@ -207,9 +173,9 @@
 		</div>
 
 		<!-- jQuery -->
-		<script src="assets/js/jquery.js"></script>
+		<script src="/assets/js/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
-		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="/assets/js/bootstrap.min.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>

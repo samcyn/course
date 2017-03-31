@@ -16,18 +16,18 @@ class ApplicationController extends Controller
         $this->course = $course;
     }
 
-    public function index($id)
+    public function index($slug)
     {
-        $this->course->getCourse($id);
+        $course = $this->course->getCourse($slug);
 
-        return view('application.index');
+        return view('application.index', compact('course'));
     }
 
-    public function store(Request $request)
+    public function store(Request $request, $slug)
     {
-        $this->validation($request, [
-            'first_name' => 'required',
-            'last_name' => 'required',
+        $this->validate($request, [
+            'first_name' => 'required|min:3',
+            'last_name' => 'required|min:3',
             'phone' => 'required|min:11',
             'email' => 'required|min:10',
             'age_range' => 'required',
@@ -37,9 +37,15 @@ class ApplicationController extends Controller
             'employment_status' => 'required'
         ]);
 
+        $course = $this->course->getCourse($slug);
 
-        $application = $this->application->saveApplicant($request->all());
+        $data = $request->all();
 
+        $data['course_id'] = $course->id;
+
+        $application = $this->application->saveApplicant($data);
+
+      
         return redirect('/payment/'. $application->id);
     }
 }

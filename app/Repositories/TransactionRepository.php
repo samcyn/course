@@ -14,9 +14,16 @@ class TransactionRepository implements TransactionInterface
         $this->transaction = $transaction;
     }
 
+    public function getTransaction($id)
+    {
+        return $this->transaction->find($id);
+    }
+
     public function saveTransaction($data = [])
     {
-        return $this->transaction->create($data);
+        $transaction =  $this->transaction->create($data);
+        
+        return $this->transaction->with('applicant')->find($transaction->id);
     }
 
     public function updateTransaction($id, $data = [])

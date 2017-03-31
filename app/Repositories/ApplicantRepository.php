@@ -14,7 +14,7 @@ class ApplicantRepository implements ApplicantInterface
 
     public function getApplicant($id)
     {
-        return $this->applicant->find($id);
+        return $this->applicant->with('course')->find($id);
     }
 
     public function saveApplicant($data = [])
@@ -24,7 +24,7 @@ class ApplicantRepository implements ApplicantInterface
 
     public function updatePaymentStatus($id, $status)
     {
-        return $this->updateApplicant($id, ['status' => $status]);
+        return $this->updateApplicant($id, ['payment_status' => $status]);
     }
 
     public function updateApplicant($id, $data = [])

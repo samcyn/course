@@ -17,7 +17,8 @@ class IndexController extends Controller
     {
         $courses = $this->course->getAllCourses();
 
-        return view('home.index', compact($courses));
+
+        return view('home.index', compact('courses'));
     }
 
     public function store(Request $request)
@@ -27,6 +28,6 @@ class IndexController extends Controller
             'email' => 'required|min:10'
         ]);
 
-        return redirect('/courses/'.$request->course_id.'/apply')->withInput($request->all());
+        return redirect('/courses/'.$request->course_slug.'/apply')->withInput($request->all());
     }
 }

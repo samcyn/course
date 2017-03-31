@@ -13,9 +13,9 @@ class CourseController extends Controller
         $this->course = $course;
     }
 
-    public function show($id)
+    public function show($slug)
     {
-        $course = $this->course->getCourse($id);
+        $course = $this->course->getCourse($slug);
 
         return view('course.view', compact('course'));
     }

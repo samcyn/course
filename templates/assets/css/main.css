@@ -721,3 +721,8 @@ ul.inline_block{
   box-shadow: none !important;
   background: #FFF !important;
 }
+
+.current{
+  background: #fecb3f !important;
+  color: #FFF !important;
+}

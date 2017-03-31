@@ -1,0 +1,27 @@
+# Logfile created on 2017-03-31 16:19:06 +0100 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-31 16:19:06 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [8c5f914a] Running /usr/bin/env mkdir -p /tmp as root@104.131.168.249
+ DEBUG [8c5f914a] Command: /usr/bin/env mkdir -p /tmp
+  INFO [8c5f914a] Finished in 7.902 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SwitchCourses-production-usmanirale.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SwitchCourses-production-usmanirale.sh 100.0%
+  INFO [15bb5aa9] Running /usr/bin/env chmod 700 /tmp/git-ssh-SwitchCourses-production-usmanirale.sh as root@104.131.168.249
+ DEBUG [15bb5aa9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SwitchCourses-production-usmanirale.sh
+  INFO [15bb5aa9] Finished in 0.846 seconds with exit status 0 (successful).
+  INFO [fe3eaddd] Running /usr/bin/env git ls-remote --heads git@gitlab.com:switchElites/switch-courses.git as root@104.131.168.249
+ DEBUG [fe3eaddd] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git ls-remote --heads git@gitlab.com:switchElites/switch-courses.git )
+ DEBUG [fe3eaddd] 	GitLab: The project you were looking for could not be found.
+ DEBUG [fe3eaddd] 	
+ DEBUG [fe3eaddd] 	fatal: Could not read from remote repository.
+ DEBUG [fe3eaddd] 	
+ DEBUG [fe3eaddd] 	
+Please make sure you have the correct access rights
+and the repository exists.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-03-31 16:21:06 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [60ba7dc9] Running /usr/bin/env mkdir -p /tmp as root@104.131.168.249
+ DEBUG [60ba7dc9] Command: /usr/bin/env mkdir -p /tmp
+  INFO [60ba7dc9] Finished in 9.205 seconds with exit status 0 (successful).

@@ -217,6 +217,22 @@ body[data="course"] header{
     background: transparent;
 }
 
+.navbar-default .navbar-nav>li>a,
+.navbar-default .navbar-nav>.active>a,
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus, 
+.navbar-default .navbar-nav>.active>a:hover, 
+.navbar-default .navbar-nav>.active>a:focus{
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #0e1f5a;
+}
+
 body[data="index"] .navbar-default .navbar-nav>li>a,
 body[data="index"] .navbar-default .navbar-nav>.active>a,
 body[data="index"] .navbar-default .navbar-nav>li>a:hover,
@@ -224,12 +240,6 @@ body[data="index"] .navbar-default .navbar-nav>li>a:focus,
 body[data="index"] .navbar-default .navbar-nav>.active>a:hover, 
 body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
 	color: #FFF;
-	font-family: 'Nunito', sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: normal;
 }
 
 .card .content .course_price{ 
@@ -382,6 +392,7 @@ footer .navbar-default .navbar-nav>.active>a:focus
 }
 .w-104{
 	min-width: 104px;
+  height: 40px;
 }
 
 .w-210{
@@ -622,20 +633,20 @@ ul.inline_block{
 @media( max-width : 585px ) {
 
     .wizard {
-        width: 90%;
+        width: 100%;
         height: auto !important;
     }
 
     .wizard .nav-tabs > li a {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
+        width: 100%;
+        height: auto;
+        line-height: 30px;
     }
 
     .wizard li.active:after {
         content: " ";
         position: absolute;
-        left: 35%;
+        left: 0;
     }
 }
 
@@ -701,4 +712,13 @@ ul.inline_block{
   line-height: normal;
   letter-spacing: normal;
   color: #0e1f5a;
+}
+
+.bootstrap-select .dropdown-toggle:focus,
+.btn-group.open .dropdown-toggle,
+.btn.dropdown-toggle.bs-placeholder.btn-default
+{
+  outline: 0 !important;
+  box-shadow: none !important;
+  background: #FFF !important;
 }

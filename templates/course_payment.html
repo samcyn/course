@@ -14,6 +14,8 @@
 		<!-- Bootstrap CSS -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	</head>
 	<body data="course">
 		<div class="wrapper clearfix m-b-80">
@@ -202,7 +204,11 @@
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("input[type='radio']").on("change", function(){
-					console.log($(this));
+					//console.log($(this).parent());
+					if ($(this).attr("checked", "checked")) {
+						$(this).parent().addClass("current");
+					}
+					
 				});
 			});
 		</script>

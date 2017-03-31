@@ -18,7 +18,7 @@ class PaymentController extends Controller
        $this->transaction = $transaction;
     }
 
-    public function index($applicant_id)
+    public function index($applicant_id = 1)
     {
         $applicant = $this->applicant->getApplicant($applicant_id);
 

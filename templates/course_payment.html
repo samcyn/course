@@ -6,6 +6,8 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>SWITCH! Immersive Courses</title>
 
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
@@ -14,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
 	</head>
 	<body data="course">
-		<div class="wrapper clearfix">
+		<div class="wrapper clearfix m-b-80">
 			<header class="clearfix dis-flex">
 				<div class="container">
 					<!--navbar begins here-->
@@ -49,20 +51,75 @@
 				<div class="container" style="margin: 0 auto;">
 					<section class="intros clearfix p-t-60">
 						<div class="col-md-7">
-							<h3 class="m-t-0">FrontEnd Development</h3>
+							<h3 class="m-t-0 course_title">FrontEnd Development</h3>
+							<!--wizard here-->
+							<div class="wizard">
+								<div class="wizard-inner">
+					               
+					                <ul class="nav nav-tabs">
+
+					                    <li role="presentation" >
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-brand">
+					                                	<i class="fa fa-check"></i>
+					                                </span>
+					                                Select Course
+					                            </span>
+					                        </a>
+					                    </li>
+
+					                    <li role="presentation">
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-brand">
+					                                    <i class="fa fa-check"></i>
+					                                </span>
+					                                Personal Information
+					                            </span>
+					                        </a>
+					                    </li>
+					                    <li role="presentation" class="active">
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-transparent">3</span>
+					                                Make Payment
+					                            </span>
+					                        </a>
+					                    </li>
+
+					                    <li role="presentation">
+					                        <a href="#">
+					                            <span class="round-tab">
+					                                <span class="badge bg-transparent">4</span>
+					                                Complete
+					                            </span>
+					                        </a>
+					                    </li>
+					                </ul>
+					            </div>
+				            </div>
+
+							<!-- wizard ended -->
 							<form>
 								<div class="row">
 								
-									<div class="col-md-7">
+									<div class="col-md-8">
 										
 									    <label class="control-label">Select a payment method</label>
-									   
-										<div class="form-group">
-										    <label class="radio-inline"><input type="radio" name="method">Bank Transfer</label>
+									   <div>
+									   		<br>
+									   </div>
+										<div class="form-group payment_method">
+										    <label class="radio-inline"><input type="radio" name="method"><img src="assets/img/bank.png"> Bank Transfer</label>
 											<label class="radio-inline"><input type="radio" name="method">ATM Card</label>
 										</div>
+										<div>
+									   		<br>
+									   </div>
 									</div>
-									<div class="col-md-7">
+
+									<div class="col-md-8">
 										<div class="form-group">
 										    <select class="selectpicker form-control" title="Choose Your Preferred Bank" name="range">
 								  			  <option>Frontend Development</option>
@@ -72,7 +129,10 @@
 											</select>
 										</div>
 									</div>
-									<div class="col-md-7">
+									<div>
+								   		<br>
+								   </div>
+									<div class="col-md-8">
 										<div class="clearfix text-center bank_details">
 										    <img src="assets/img/gtb.png">
 										    <h6><strong>Guaranty Trust Bank</strong></h6>
@@ -88,17 +148,20 @@
 										    </ul>
 										</div>
 									</div>
-									<div class="col-md-5">
+									<div class="col-md-4">
 										<div class="clearfix">
-										    <p>Note: Please include the following code int the comment section when making payment: <b>SWITCHFED24<b></p>
+										    <p class="align-justify">Note:<br> Please include the following code int the comment section when making payment: <b>SWITCHFED24<b></p>
 										</div>
 									</div>
 								</div>
+								<div>
+									<br>
+								</div>
 								<div class="clearfix m-t-20">
-									<button type="submit" class="btn btn-default pull-left">
-										Back
+									<button type="submit" class="btn btn-default pull-left w-104">
+										<i class="fa fa-arrow-left "></i> Back
 									</button>
-									<button type="submit" class="btn btn_brand pull-right">Continue to Payment</button>
+									<button type="submit" class="btn btn_brand btn_enroll pull-right">Complete Enrollment</button>
 								</div>
 								
 							</form>
@@ -110,7 +173,7 @@
 	                            </div>
 	                            <div class="content text-center">
 	                            	<p class="course_price">NGN 24,000</p>
-	                                <h3 class="course_title">FrontEnd Development</h3>
+	                                <h3 class="course_title2">FrontEnd Development</h3>
 	                                <p class="course_duration">
 	                                	<span>
 	                                		<i class=""></i>
@@ -136,6 +199,13 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("input[type='radio']").on("change", function(){
+					console.log($(this));
+				});
+			});
+		</script>
 
 
 	</body>

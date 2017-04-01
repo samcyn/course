@@ -42,7 +42,7 @@
 								<div class="collapse navbar-collapse navbar-ex1-collapse">
 									<ul class="nav navbar-nav navbar-right main-nav-list">
 										<li class="active"><a href="#course">Courses</a></li>
-										<li class="animated"><a href="#about">About</a></li>
+										<li class="animated"><a href="http://switch.ng/main.html#about us">About</a></li>
 										<li class="animated"><a href="#faq">FAQ</a></li>
 									</ul>
 								</div><!-- /.navbar-collapse -->
@@ -163,7 +163,7 @@
 								<a href="#">Tell a Friend</a>
 							</li>
 							<li>
-								<a href="#">About</a>
+								<a href="http://switch.ng/main.html#about us">About</a>
 							</li>
 							<li>
 								<a href="#">FAQs</a>

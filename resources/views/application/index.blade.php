@@ -73,7 +73,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 										    <label for="last">Last Name:</label>
-										    <input type="text" name="last_name" class="form-control" id="last">
+										    <input type="text" name="last_name" class="form-control" id="last" value="{{old('last_name')}}">
 											@if ($errors->has('last_name'))
 												<span class="help-block">
 													<strong>{{ $errors->first('last_name') }}</strong>
@@ -84,7 +84,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 										    <label for="email">Email address:</label>
-										    <input type="email" name="email" class="form-control" id="email">
+										    <input type="email" name="email" class="form-control" id="email" value="{{old('email')}}">
 											@if ($errors->has('email'))
 												<span class="help-block">
 													<strong>{{ $errors->first('email') }}</strong>
@@ -95,7 +95,7 @@
 									<div class="col-md-6">
 										<div class="form-group">
 										    <label for="phone">Phone:</label>
-										    <input type="text" name="phone" class="form-control" id="phone">
+										    <input type="text" name="phone" class="form-control" id="phone" value="{{old('phone')}}">
 											@if ($errors->has('phone'))
 												<span class="help-block">
 													<strong>{{ $errors->first('phone') }}</strong>
@@ -107,10 +107,10 @@
 										<div class="form-group">
 										    <label for="range">What is your age range?</label>
 										    <select name="age_range" class="selectpicker form-control" title="Choose a course..." name="range">
-								  			  <option value="18-23">18 - 23</option>
-											  <option value="24-29">24 - 29</option>
-											  <option value="30-34">30 - 34</option>
-											  <option value="35-above">35 - above</option>
+								  			  <option value="18-23"  @if(old('age_range') == "18-23") selected  @endif>18 - 23</option>
+											  <option value="24-29" @if(old('age_range') == "24-29") selected  @endif>24 - 29</option>
+											  <option value="30-34" @if(old('age_range') == "30-34") selected  @endif>30 - 34</option>
+											  <option value="35-above" @if(old('age_range') == "35-above") selected  @endif>35 - above</option>
 											</select>
 											@if ($errors->has('age_range'))
 												<span class="help-block">
@@ -123,8 +123,8 @@
 										<div class="form-group">
 										    <label for="prefered_session">Preferred training session</label>
 										    <select name="prefered_session" class="selectpicker form-control" title="Choose a course..." id="prefered_session">
-								  			  <option value="evening">Evening</option>
-											  <option value="weekend">Weekend</option>
+								  			  <option value="evening" @if(old('prefered_session') == "evening") selected  @endif>Evening</option>
+											  <option value="weekend" @if(old('prefered_session') == "weekend") selected  @endif>Weekend</option>
 											</select>
 											@if ($errors->has('prefered_session'))
 												<span class="help-block">
@@ -136,7 +136,7 @@
 									<div class="col-md-12">
 										<div class="form-group">
 										    <label for="why_course">Why do you want to take this course?</label>
-										    <textarea name="why_course" id="why_course" class="form-control" rows="3"></textarea>
+										    <textarea name="why_course" id="why_course" class="form-control" rows="3">{{old('why_course')}}</textarea>
 											@if ($errors->has('why_course'))
 												<span class="help-block">
 													<strong>{{ $errors->first('why_course') }}</strong>
@@ -148,8 +148,8 @@
 										<div class="form-group">
 										    <label for="employment_status">What is your employment status?</label>
 										    <select name="employment_status" class="selectpicker form-control" title="Choose a course..." id="employment_status">
-								  			  <option value="employed">Employed</option>
-											  <option value="unemployed">Unemployed</option>
+								  			  <option value="employed" @if(old('employment_status') == "employed") selected  @endif>Employed</option>
+											  <option value="unemployed" @if(old('employment_status') == "unemployed") selected  @endif>Unemployed</option>
 											</select>
 											@if ($errors->has('employment_status'))
 												<span class="help-block">
@@ -162,8 +162,8 @@
 										<div class="form-group">
 										    <label for="prev_training">Do you have any training in web technologies?</label>
 										    <select name="prev_training" class="selectpicker form-control" title="Choose a course..." id="prev_training">
-								  			  <option value="no"> No </option>
-											  <option value="yes">Yes</option>
+								  			  <option value="no" @if(old('prev_training') == "no") selected  @endif> No </option>
+											  <option value="yes" @if(old('prev_training') == "yes") selected  @endif>Yes</option>
 											</select>
 											@if ($errors->has('prev_training'))
 												<span class="help-block">
@@ -176,8 +176,8 @@
 										<div class="form-group">
 										    <label for="referral">How did you hear about this course?</label>
 										    <select name="referral" class="selectpicker form-control" title="Choose a course..." id="referral">
-								  			  <option value="advert">Advert</option>
-								  			  <option value="blog">Blog</option>
+								  			  <option value="advert" @if(old('referral') == "advert") selected  @endif>Advert</option>
+								  			  <option value="blog" @if(old('referral') == "blog") selected  @endif>Blog</option>
 											</select>
 											@if ($errors->has('referral'))
 												<span class="help-block">
@@ -190,10 +190,10 @@
 										<div class="form-group">
 										    <label for="proficiency">Rate your computer proficiency</label>
 										    <select name="computer_proficiency" class="selectpicker form-control" title="Choose a course..." id="proficiency">
-								  			  <option value="bad"> Bad</option>
-											  <option value="okay">Okay</option>
-											  <option value="good">Good</option>
-											  <option value="excellent">Excellent</option>
+								  			  <option value="bad" @if(old('computer_proficiency') == "bad") selected  @endif> Bad</option>
+											  <option value="okay" @if(old('computer_proficiency') == "okay") selected  @endif>Okay</option>
+											  <option value="good" @if(old('computer_proficiency') == "good") selected  @endif>Good</option>
+											  <option value="excellent" @if(old('computer_proficiency') == "excellent") selected  @endif>Excellent</option>
 											</select>
 											@if ($errors->has('computer_proficiency'))
 												<span class="help-block">

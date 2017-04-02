@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -11,6 +11,11 @@ use Session;
 
 class ApplicantsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -124,4 +129,5 @@ class ApplicantsController extends Controller
 
         return redirect('admin/applicants');
     }
+
 }

@@ -11,6 +11,16 @@
                         Dashboard
                     </a>
                 </li>
+                 <li role="presentation">
+                    <a href="{{ url('/admin/applicants') }}">
+                        Applicants
+                    </a>
+                </li>
+                <li role="presentation">
+                    <a href="{{ url('/admin/courses') }}">
+                        Courses
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

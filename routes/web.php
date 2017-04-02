@@ -34,8 +34,10 @@ Route::get('/thankyou/{applicant_id}', 'PaymentController@status');
 
 
 
-Route::resource('/admin/applicants', 'ApplicantsController');
-Route::get('/admin', 'ApplicantsController@index');
+Route::resource('/admin/applicants', 'Admin\\ApplicantsController');
+Route::resource('/admin/courses', 'Admin\\CoursesController');
+Route::get('/admin', 'Admin\\ApplicantsController@index');
+
 
 
 

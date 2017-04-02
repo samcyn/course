@@ -7,13 +7,13 @@
 
             <div class="col-md-9">
                 <div class="panel panel-default">
-                    <div class="panel-heading">Applicants</div>
+                    <div class="panel-heading">Courses</div>
                     <div class="panel-body">
-                        <a href="{{ url('/admin/applicants/create') }}" class="btn btn-success btn-sm" title="Add New applicant">
+                        <a href="{{ url('/admin/courses/create') }}" class="btn btn-success btn-sm" title="Add New course">
                             <i class="fa fa-plus" aria-hidden="true"></i> Add New
                         </a>
 
-                        {!! Form::open(['method' => 'GET', 'url' => '/admin/applicants', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
+                        {!! Form::open(['method' => 'GET', 'url' => '/admin/courses', 'class' => 'navbar-form navbar-right', 'role' => 'search'])  !!}
                         <div class="input-group">
                             <input type="text" class="form-control" name="search" placeholder="Search...">
                             <span class="input-group-btn">
@@ -30,36 +30,26 @@
                             <table class="table table-borderless">
                                 <thead>
                                     <tr>
-                                        <th>ID</th>
-                                        <th>First Name</th>
-                                        <th>Last Name</th>
-                                        <th>Email</th>
-                                        <th>Course</th>
-                                        <th>Payment status</th>
-                                        <th>Actions</th>
+                                        <th>ID</th><th>Name</th><th>Description</th><th>Short Desc</th><th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($applicants as $item)
+                                @foreach($courses as $item)
                                     <tr>
                                         <td>{{ $item->id }}</td>
-                                        <td>{{ $item->first_name }}</td>
-                                        <td>{{ $item->last_name }}</td>
-                                        <td>{{ $item->email }}</td>
-                                        <td>{{ $item->course->name }}</td>
-                                        <td>{{ $item->payment_status }}</td>
+                                        <td>{{ $item->name }}</td><td>{{ $item->description }}</td><td>{{ $item->short_desc }}</td>
                                         <td>
-                                            <a href="{{ url('/admin/applicants/' . $item->id) }}" title="View applicant"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
-                                            <a href="{{ url('/admin/applicants/' . $item->id . '/edit') }}" title="Edit applicant"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
+                                            <a href="{{ url('/admin/courses/' . $item->id) }}" title="View course"><button class="btn btn-info btn-xs"><i class="fa fa-eye" aria-hidden="true"></i> View</button></a>
+                                            <a href="{{ url('/admin/courses/' . $item->id . '/edit') }}" title="Edit course"><button class="btn btn-primary btn-xs"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a>
                                             {!! Form::open([
                                                 'method'=>'DELETE',
-                                                'url' => ['/admin/applicants', $item->id],
+                                                'url' => ['/admin/courses', $item->id],
                                                 'style' => 'display:inline'
                                             ]) !!}
                                                 {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i> Delete', array(
                                                         'type' => 'submit',
                                                         'class' => 'btn btn-danger btn-xs',
-                                                        'title' => 'Delete applicant',
+                                                        'title' => 'Delete course',
                                                         'onclick'=>'return confirm("Confirm delete?")'
                                                 )) !!}
                                             {!! Form::close() !!}
@@ -68,7 +58,7 @@
                                 @endforeach
                                 </tbody>
                             </table>
-                            <div class="pagination-wrapper"> {!! $applicants->appends(['search' => Request::get('search')])->render() !!} </div>
+                            <div class="pagination-wrapper"> {!! $courses->appends(['search' => Request::get('search')])->render() !!} </div>
                         </div>
 
                     </div>

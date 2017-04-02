@@ -31,7 +31,7 @@
 </div><div class="form-group {{ $errors->has('payment_status') ? 'has-error' : ''}}">
     {!! Form::label('payment_status', 'Payment Status', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::text('payment_status', null, ['class' => 'form-control']) !!}
+        {!! Form::text('payment_status', $payment_statuses, ['class' => 'form-control']) !!}
         {!! $errors->first('payment_status', '<p class="help-block">:message</p>') !!}
     </div>
 </div>

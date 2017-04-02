@@ -15,7 +15,7 @@ class ApplicantsController extends Controller
     {
         $this->middleware('auth');
     }
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -90,7 +90,9 @@ class ApplicantsController extends Controller
     {
         $applicant = Applicant::findOrFail($id);
 
-        return view('admin.applicants.edit', compact('applicant'));
+        $payment_statuses = ['pending', 'success'];
+
+        return view('admin.applicants.edit', compact('applicant', 'payment_statuses'));
     }
 
     /**

@@ -30,7 +30,7 @@
 									<span class="icon-bar"></span>
 									<span class="icon-bar"></span>
 								</button>
-								<a class="navbar-brand animated" href="index.html">
+								<a class="navbar-brand animated" href="/">
 									<img src="/assets/img/logo/logo.svg" alt="Switch" class="logo-default">
 								</a>
 							</div>

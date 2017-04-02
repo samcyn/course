@@ -1,7 +1,7 @@
 @extends('layouts.new-switch')
 
 @section('content')
-<section class="clearfix height-350p" style="background-image: url('assets/img/about/bg.jpeg')">
+<section class="clearfix height-350p" style="background-image: url('/assets/img/about/bg.jpeg')">
 				<div class="container">
 					
 				</div>
@@ -13,27 +13,20 @@
 					<div class="row">
                         
                         <div class="col-md-8">
-                            <h3 class="heading hr-blue m-t-0 text-left">Who is Switch?</h3>
+                            <h3 class="heading hr-blue m-t-0 text-left">{{$faq->title}}</h3>
                             <p class="align-justify">
-                                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                {{$faq->content}}
                             </p>
                         </div>
                         <div class="col-md-4">
                             <h4 class="hr-blue">Related Question</h4>
                             <ul class="list_style_none ">
-                                <li ><a href="#">Am I eligible?</a></li>
+                                 @foreach($other_faqs as $faq)
                                 <li>
-                                    <a href="#">How can I be in Switch?</a>
+                                    <a href="/faq/{{$faq->slug}}">{{$faq->title}}</a>
                                 </li>
-                                <li>
-                                    <a href="#">What's the length of the course?</a>
-                                </li>
-                                <li>
-                                    <a href="#">How much does it cost?</a>
-                                </li>
-                                <li>
-                                    <a href="#">Am I eligible? </a>
-                                </li>
+                                @endforeach
+                                
                             </ul>
                         </div>
                     </div>

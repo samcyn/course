@@ -7,6 +7,8 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<title>SWITCH! Immersive Courses</title>
 
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 
@@ -39,7 +41,7 @@
 							<div class="collapse navbar-collapse navbar-ex1-collapse">
 								<ul class="nav navbar-nav navbar-right main-nav-list">
 									<li class="active"><a href="#course">Course</a></li>
-									<li class="animated"><a href="#about">About</a></li>
+									<li class="animated"><a href="http://switch.ng/main.html#about us">About</a></li>
 									<li class="animated"><a href="#faq">FAQ</a></li>
 								</ul>
 							</div><!-- /.navbar-collapse -->

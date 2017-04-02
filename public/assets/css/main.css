@@ -40,7 +40,9 @@ body[data="index"] header{
 
 .th_4{
 	height: calc(100% - 80px);
-	background: rgba(255, 255, 255, 0.1)
+	background: rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
 }
 
 .th_1{
@@ -91,6 +93,10 @@ h3.title{
 	width: 150px;
 }
 
+.form-inline .objective{
+  font-size: 20px;
+  margin-right: 20px;
+}
 /*.thumbnail {
     padding: 4px;
     margin-bottom: 20px;
@@ -115,6 +121,12 @@ section .heading{
 
 .hr-white{
 	color: #FFFFFF;
+}
+
+img.desktop{
+  position: absolute;
+  left: 886px;
+  bottom: -20px;
 }
 
 .content h5{
@@ -158,18 +170,24 @@ section.course{
 }
 
 section.course .card{
-	height: 400px;
+	height: 420px;
 	background: #FFF;
 }
 
 section.course .card .header{
-	height: 140px;
+	height: 160px;
 	border-radius: 2px;
   	background-image: linear-gradient(to left, #00e1fe, #4facfe);
 }
 
 section.course .card .content{
 	padding: 20px;
+  height: calc(100% - 160px);
+}
+
+section.course .card .content p{
+  height: 120px;
+  overflow: hidden;
 }
 
 section.course .col-md-3{

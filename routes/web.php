@@ -34,3 +34,12 @@ Route::get('/thankyou/{applicant_id}', 'PaymentController@status');
 
 
 
+Route::resource('/admin/applicants', 'ApplicantsController');
+Route::get('/admin', 'ApplicantsController@index');
+
+
+
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

@@ -33,7 +33,8 @@ function payWithPaystack(applicant_id){
 
   function handlePayment(email, amount, ref, meta){
     var handler = PaystackPop.setup({
-      key: 'pk_test_f0dfa9ed3fd01bbbf59ede20a02695115871bb48',
+    //   key: 'pk_test_f0dfa9ed3fd01bbbf59ede20a02695115871bb48',
+      key: 'pk_live_80101dc1b5cbdd4abfebb9767722c4d94deae306',
       email: email,
       amount: amount * 100,
       ref: ref,

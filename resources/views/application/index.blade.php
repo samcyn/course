@@ -74,18 +74,33 @@
 										<div class="form-group">
 										    <label for="last">Last Name:</label>
 										    <input type="text" name="last_name" class="form-control" id="last">
+											@if ($errors->has('last_name'))
+												<span class="help-block">
+													<strong>{{ $errors->first('last_name') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 										    <label for="email">Email address:</label>
 										    <input type="email" name="email" class="form-control" id="email">
+											@if ($errors->has('email'))
+												<span class="help-block">
+													<strong>{{ $errors->first('email') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
 										<div class="form-group">
 										    <label for="phone">Phone:</label>
 										    <input type="text" name="phone" class="form-control" id="phone">
+											@if ($errors->has('phone'))
+												<span class="help-block">
+													<strong>{{ $errors->first('phone') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -97,6 +112,11 @@
 											  <option value="30-34">30 - 34</option>
 											  <option value="35-above">35 - above</option>
 											</select>
+											@if ($errors->has('age_range'))
+												<span class="help-block">
+													<strong>{{ $errors->first('age_range') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -106,12 +126,22 @@
 								  			  <option value="evening">Evening</option>
 											  <option value="weekend">Weekend</option>
 											</select>
+											@if ($errors->has('prefered_session'))
+												<span class="help-block">
+													<strong>{{ $errors->first('prefered_session') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-12">
 										<div class="form-group">
 										    <label for="why_course">Why do you want to take this course?</label>
-										    <textarea name="why_course" id="why_course" class="form-control" rows="3" required="required"></textarea>
+										    <textarea name="why_course" id="why_course" class="form-control" rows="3"></textarea>
+											@if ($errors->has('why_course'))
+												<span class="help-block">
+													<strong>{{ $errors->first('why_course') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -121,6 +151,11 @@
 								  			  <option value="employed">Employed</option>
 											  <option value="unemployed">Unemployed</option>
 											</select>
+											@if ($errors->has('employment_status'))
+												<span class="help-block">
+													<strong>{{ $errors->first('employment_status') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -130,6 +165,11 @@
 								  			  <option value="no"> No </option>
 											  <option value="yes">Yes</option>
 											</select>
+											@if ($errors->has('prev_training'))
+												<span class="help-block">
+													<strong>{{ $errors->first('prev_training') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -139,6 +179,11 @@
 								  			  <option value="advert">Advert</option>
 								  			  <option value="blog">Blog</option>
 											</select>
+											@if ($errors->has('referral'))
+												<span class="help-block">
+													<strong>{{ $errors->first('referral') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									<div class="col-md-6">
@@ -150,6 +195,11 @@
 											  <option value="good">Good</option>
 											  <option value="excellent">Excellent</option>
 											</select>
+											@if ($errors->has('computer_proficiency'))
+												<span class="help-block">
+													<strong>{{ $errors->first('computer_proficiency') }}</strong>
+												</span>
+											@endif
 										</div>
 									</div>
 									

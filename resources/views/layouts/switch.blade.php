@@ -7,6 +7,8 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<title>SWITCH! Immersive Courses</title>
 
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
 

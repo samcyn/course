@@ -52,7 +52,7 @@
 						<div class="shapes clearfix">
 							<div class="col-md-12">
 								<h3 class="title">SWITCH! Immersive Courses</h3>
-								<p class="introduction">It's time to SWITCH! Accelerate your career by taking our<br> immersive courses in web technologies. A good way to start a new<br> career or expand your skill-set.Type something</p>
+								<p class="introduction">It's time to SWITCH! Accelerate your career by taking our<br> immersive courses in web technologies. A good way to start a new<br> career or expand your skill-set.</p>
 							</div>
 							<!--<div class="col-md-6">
 								<div class="thumbnail">

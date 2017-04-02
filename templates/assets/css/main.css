@@ -431,10 +431,18 @@ footer .navbar-default .navbar-nav>.active>a:focus
 .w-210{
 	min-width: 210px;
 }
+
+.width-100p{
+	width: 100%;
+}
+
 .align-justify{
 	text-align: justify;
 }
 
+.height-120{
+  height: 120px;
+}
 .height-350p{
   height: 350px;
 }
@@ -515,16 +523,13 @@ footer .navbar-default .navbar-nav>.active>a:focus
 	color: #222 !important;
 }
 
-ul.inline_block{
-	list-style-type: none;
-	padding-left: 0px;
-}
-.inline_block li{
-	display: inline-block;
+.list_style_none, ul.inline_block{
+  list-style-type: none;
+  padding-left: 0px;
 }
 
-.width-100p{
-	width: 100%;
+.inline_block li{
+	display: inline-block;
 }
 
 .bank_details{
@@ -588,16 +593,16 @@ ul.inline_block{
     background: #fff;
 }
 
-    .wizard .nav-tabs {
-        position: relative;
-        margin: 40px auto;
-        margin-bottom: 0;
-        border-bottom-color: #e0e0e0;
-    }
+.wizard .nav-tabs {
+    position: relative;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom-color: #e0e0e0;
+}
 
-    .wizard > div.wizard-inner {
-        position: relative;
-    }
+.wizard > div.wizard-inner {
+    position: relative;
+}
 
 
 .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
@@ -606,9 +611,6 @@ ul.inline_block{
     border: 0;
     border-bottom-color: transparent;
 }
-
-
-
 
 .wizard .nav-tabs > li {
     width: 25%;
@@ -781,4 +783,30 @@ ul.inline_block{
 }
 .mosach [class*="col-"] {
     padding: 0px;
+}
+
+/* FAQ PAGE */
+.faq ul li a{
+  display: block;
+  padding: 10px 10px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #4c6078;
+}
+
+.faq-contact{
+  padding: 50px 50px;
+  background-image: linear-gradient(to top, #445482, #49558f);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.faq-contact  .form-group label, .faq-contact small{
+  color: #FFF;
 }

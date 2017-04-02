@@ -1,19 +1,3 @@
-$(document).ready(function(){
-    $("#uba").hide();
-    $("#gtbank").hide();
-
-
-    $("#selectedBank").change(function(){
-        $("#uba").hide();
-    $("#gtbank").hide();
-        if($(this).val() == "gtbank")
-            $("#gtbank").show();
-        
-        if($(this).val() == "uba")
-            $("#uba").show();
-    });
-});
-
 function payWithPaystack(applicant_id){
     $.ajaxSetup({
     headers: {

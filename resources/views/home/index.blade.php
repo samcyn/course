@@ -159,9 +159,9 @@
 							<span class="copyright">© 2016 Great Simple All rights reserved</span>
 						</li>
 						<ul class="pull-right">
-							<li>
+							{{--<li>
 								<a href="#">Tell a Friend</a>
-							</li>
+							</li>--}}
 							<li>
 								<a href="/about-us">About</a>
 							</li>

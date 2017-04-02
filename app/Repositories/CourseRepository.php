@@ -14,9 +14,12 @@ class CourseRepository implements CourseInterface
     }
 
 
-    public function getAllCourses()
+    public function getAllCourses($limit = null)
     {
-        return $this->course->all();
+        if(is_null($limit))
+            return $this->course->all();
+        else
+            return $this->course->get()->take($limit);
     }
 
     public function getCourse($slug)

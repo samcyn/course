@@ -21,6 +21,11 @@
                         Courses
                     </a>
                 </li>
+                <li role="presentation">
+                    <a href="{{ url('/admin/faqs') }}">
+                        FAQs
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

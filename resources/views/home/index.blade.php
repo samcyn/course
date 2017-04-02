@@ -41,9 +41,9 @@
 								<!-- Collect the nav links, forms, and other content for toggling -->
 								<div class="collapse navbar-collapse navbar-ex1-collapse">
 									<ul class="nav navbar-nav navbar-right main-nav-list">
-										<li class="active"><a href="#course">Courses</a></li>
-										<li class="animated"><a href="http://switch.ng/main.html#about us">About</a></li>
-										<li class="animated"><a href="#faq">FAQ</a></li>
+										<li class="active"><a href="/courses">Courses</a></li>
+										<li class="animated"><a href="/about-us">About</a></li>
+										<li class="animated"><a href="/faq">FAQ</a></li>
 									</ul>
 								</div><!-- /.navbar-collapse -->
 							</div>
@@ -163,10 +163,10 @@
 								<a href="#">Tell a Friend</a>
 							</li>
 							<li>
-								<a href="http://switch.ng/main.html#about us">About</a>
+								<a href="/about-us">About</a>
 							</li>
 							<li>
-								<a href="#">FAQs</a>
+								<a href="/faq">FAQs</a>
 							</li>
 						</ul>
 					</ul>

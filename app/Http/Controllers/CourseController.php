@@ -13,6 +13,13 @@ class CourseController extends Controller
         $this->course = $course;
     }
 
+    public function index()
+    {
+        $courses = $this->course->getAllCourses();
+        
+        return view('course.index', compact('courses'));
+    }
+
     public function show($slug)
     {
         $course = $this->course->getCourse($slug);

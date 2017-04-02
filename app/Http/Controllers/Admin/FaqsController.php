@@ -1,15 +1,15 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
-use App\Models\Applicant;
+use App\Models\Faq;
 use Illuminate\Http\Request;
 use Session;
 
-class ApplicantsController extends Controller
+class FaqsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,13 +22,16 @@ class ApplicantsController extends Controller
         $perPage = 25;
 
         if (!empty($keyword)) {
-            //add search params here
-            $applicants = Applicant::with('course')->paginate($perPage);
+            $faqs = Faq::where('title', 'LIKE', "%$keyword%")
+				->orWhere('content', 'LIKE', "%$keyword%")
+				->orWhere('slug', 'LIKE', "%$keyword%")
+				
+                ->paginate($perPage);
         } else {
-            $applicants = Applicant::with('course')->paginate($perPage);
+            $faqs = Faq::paginate($perPage);
         }
 
-        return view('admin.applicants.index', compact('applicants'));
+        return view('admin.faqs.index', compact('faqs'));
     }
 
     /**
@@ -38,7 +41,7 @@ class ApplicantsController extends Controller
      */
     public function create()
     {
-        return view('admin.applicants.create');
+        return view('admin.faqs.create');
     }
 
     /**
@@ -53,11 +56,11 @@ class ApplicantsController extends Controller
         
         $requestData = $request->all();
         
-        Applicant::create($requestData);
+        Faq::create($requestData);
 
-        Session::flash('flash_message', 'Applicant added!');
+        Session::flash('flash_message', 'Faq added!');
 
-        return redirect('admin/applicants');
+        return redirect('admin/faqs');
     }
 
     /**
@@ -69,9 +72,9 @@ class ApplicantsController extends Controller
      */
     public function show($id)
     {
-        $applicant = Applicant::findOrFail($id);
+        $faq = Faq::findOrFail($id);
 
-        return view('admin.applicants.show', compact('applicant'));
+        return view('admin.faqs.show', compact('faq'));
     }
 
     /**
@@ -83,9 +86,9 @@ class ApplicantsController extends Controller
      */
     public function edit($id)
     {
-        $applicant = Applicant::findOrFail($id);
+        $faq = Faq::findOrFail($id);
 
-        return view('admin.applicants.edit', compact('applicant'));
+        return view('admin.faqs.edit', compact('faq'));
     }
 
     /**
@@ -101,12 +104,12 @@ class ApplicantsController extends Controller
         
         $requestData = $request->all();
         
-        $applicant = Applicant::findOrFail($id);
-        $applicant->update($requestData);
+        $faq = Faq::findOrFail($id);
+        $faq->update($requestData);
 
-        Session::flash('flash_message', 'Applicant updated!');
+        Session::flash('flash_message', 'Faq updated!');
 
-        return redirect('admin/applicants');
+        return redirect('admin/faqs');
     }
 
     /**
@@ -118,10 +121,10 @@ class ApplicantsController extends Controller
      */
     public function destroy($id)
     {
-        Applicant::destroy($id);
+        Faq::destroy($id);
 
-        Session::flash('flash_message', 'Applicant deleted!');
+        Session::flash('flash_message', 'Faq deleted!');
 
-        return redirect('admin/applicants');
+        return redirect('admin/faqs');
     }
 }

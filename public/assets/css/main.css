@@ -160,7 +160,7 @@ section.work{
 	align-items: center;
 }
 
-section.course{
+section.course, section.mosach{
   height: 637px;
   background-image: linear-gradient(to top, #445482, #49558f);
   display: flex;
@@ -195,7 +195,9 @@ section.course .col-md-3{
 	padding-right: 10px;
 }
 
-body[data="index"] footer.footer{
+body[data="index"] footer.footer,
+body[data="about"] footer.footer
+{
   height: 120px;
   background-color: #ffffff;
 }
@@ -214,12 +216,16 @@ body[data="index"] .navbar.navbar-default{
     padding-bottom: 40px;
 }
 
-body[data="course"] .navbar.navbar-default{
+body[data="course"] .navbar.navbar-default,
+body[data="about"] .navbar.navbar-default
+{
     padding-top: 15px;
     padding-bottom: 10px;
 }
 
-body[data="course"] header{
+body[data="course"] header,
+body[data="about"] header
+{
 	border-bottom: 1px solid #EEE;
 }
 
@@ -399,11 +405,21 @@ footer .navbar-default .navbar-nav>.active>a:focus
 	margin-bottom: 80px;
 }
 
-
 .p-l-0{
 	padding-left: 0px;
 }
 
+.p-t-50{
+  padding-top: 50px;
+}
+
+.p-t-100{
+  padding-top: 100px;
+}
+
+.p-b-50{
+  padding-bottom: 50px;
+}
 .p-t-60{
 	padding-top: 60px;
 }
@@ -415,8 +431,20 @@ footer .navbar-default .navbar-nav>.active>a:focus
 .w-210{
 	min-width: 210px;
 }
+
+.width-100p{
+	width: 100%;
+}
+
 .align-justify{
 	text-align: justify;
+}
+
+.height-120{
+  height: 120px;
+}
+.height-350p{
+  height: 350px;
 }
 
 .intros .card .header{
@@ -495,16 +523,13 @@ footer .navbar-default .navbar-nav>.active>a:focus
 	color: #222 !important;
 }
 
-ul.inline_block{
-	list-style-type: none;
-	padding-left: 0px;
-}
-.inline_block li{
-	display: inline-block;
+.list_style_none, ul.inline_block{
+  list-style-type: none;
+  padding-left: 0px;
 }
 
-.width-100p{
-	width: 100%;
+.inline_block li{
+	display: inline-block;
 }
 
 .bank_details{
@@ -568,16 +593,16 @@ ul.inline_block{
     background: #fff;
 }
 
-    .wizard .nav-tabs {
-        position: relative;
-        margin: 40px auto;
-        margin-bottom: 0;
-        border-bottom-color: #e0e0e0;
-    }
+.wizard .nav-tabs {
+    position: relative;
+    margin: 40px auto;
+    margin-bottom: 0;
+    border-bottom-color: #e0e0e0;
+}
 
-    .wizard > div.wizard-inner {
-        position: relative;
-    }
+.wizard > div.wizard-inner {
+    position: relative;
+}
 
 
 .wizard .nav-tabs > li.active > a, .wizard .nav-tabs > li.active > a:hover, .wizard .nav-tabs > li.active > a:focus {
@@ -586,9 +611,6 @@ ul.inline_block{
     border: 0;
     border-bottom-color: transparent;
 }
-
-
-
 
 .wizard .nav-tabs > li {
     width: 25%;
@@ -743,4 +765,48 @@ ul.inline_block{
 .current{
   background: #fecb3f !important;
   color: #FFF !important;
+}
+
+/* about us page styling*/
+.thumbnail{
+  border: none;
+  background: transparent !important;
+  margin-bottom: 0px;
+  padding: 0px;
+  border-radius: 0px;
+}
+
+.box{
+  width: 100%;
+  min-height: 200px;
+  background: #EEE;
+}
+.mosach [class*="col-"] {
+    padding: 0px;
+}
+
+/* FAQ PAGE */
+.faq ul li a{
+  display: block;
+  padding: 10px 10px;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #4c6078;
+}
+
+.faq-contact{
+  padding: 50px 50px;
+  background-image: linear-gradient(to top, #445482, #49558f);
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.faq-contact  .form-group label, .faq-contact small{
+  color: #FFF;
 }

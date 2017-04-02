@@ -14,7 +14,14 @@
 Route::get('/', 'IndexController@index');
 Route::post('/', 'IndexController@store');
 
+Route::get('/about-us', 'IndexController@about');
 
+Route::get('/faq', 'IndexController@faq');
+Route::get('/faq/{slug}', 'IndexController@singleFaq');
+
+
+
+Route::get('/courses', 'CourseController@index');
 Route::get('/courses/{slug}', 'CourseController@show');
 
 
@@ -34,8 +41,10 @@ Route::get('/thankyou/{applicant_id}', 'PaymentController@status');
 
 
 
-Route::resource('/admin/applicants', 'ApplicantsController');
-Route::get('/admin', 'ApplicantsController@index');
+Route::resource('/admin/applicants', 'Admin\\ApplicantsController');
+Route::resource('/admin/courses', 'Admin\\CoursesController');
+Route::get('/admin', 'Admin\\ApplicantsController@index');
+
 
 
 
@@ -43,3 +52,5 @@ Route::get('/admin', 'ApplicantsController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::resource('admin/faqs', 'Admin\\FaqsController');

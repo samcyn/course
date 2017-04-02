@@ -4,10 +4,7 @@
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<meta name="csrf-token" content="{{ csrf_token() }}">
 		<title>SWITCH! Immersive Courses</title>
-
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
@@ -16,9 +13,10 @@
 		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
 		<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 	</head>
-	<body data="course">
-		<div class="wrapper clearfix m-b-80">
+	<body data="about">
+		<div class="wrapper clearfix">
 			<header class="clearfix dis-flex">
 				<div class="container">
 					<!--navbar begins here-->
@@ -41,7 +39,7 @@
 							<div class="collapse navbar-collapse navbar-ex1-collapse">
 								<ul class="nav navbar-nav navbar-right main-nav-list">
 									<li class="active"><a href="/courses">Courses</a></li>
-									<li class="animated"><a href="/about-us">About</a></li>
+									<li class="animated"><a href="about-us">About</a></li>
 									<li class="animated"><a href="/faq">FAQ</a></li>
 								</ul>
 							</div><!-- /.navbar-collapse -->
@@ -49,18 +47,15 @@
 					</nav>
 				</div>
 			</header>
-			@yield('content')
-
-			</footer>
+            @yield('content')
 	
+			
 		</div>
-         <script src="https://js.paystack.co/v1/inline.js"></script>
-       
+
 		<!-- jQuery -->
 		<script src="/assets/js/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
 		<script src="/assets/js/bootstrap.min.js"></script>
-		 <script src="/js/payment.js"></script>
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>

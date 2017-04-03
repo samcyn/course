@@ -206,7 +206,7 @@
 				</div>
 			</section>
 </div>
-
+		<script src="https://js.paystack.co/v1/inline.js"></script>
 		<!-- jQuery -->
 		<script src="/assets/js/jquery.js"></script>
 		<!-- Bootstrap JavaScript -->
@@ -214,7 +214,6 @@
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
-		<script src="/js/payment.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$("input[type='radio']").on("change", function(){
@@ -225,21 +224,21 @@
 				});
 
 				    $("#uba").hide();
-    $("#gtbank").hide();
+					$("#gtbank").hide();
 
 
-    $("#selectedBank").change(function(){
-        $("#uba").hide();
-    $("#gtbank").hide();
-        if($(this).val() == "gtbank")
-            $("#gtbank").show();
-        
-        if($(this).val() == "uba")
-            $("#uba").show();
-    });
+					$("#selectedBank").change(function(){
+						$("#uba").hide();
+					$("#gtbank").hide();
+						if($(this).val() == "gtbank")
+							$("#gtbank").show();
+						
+						if($(this).val() == "uba")
+							$("#uba").show();
+					});
 			});
 		</script>
-
-
+		<script src="/js/payment.js"></script>
+		
 	</body>
 </html>

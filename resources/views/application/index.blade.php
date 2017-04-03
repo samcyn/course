@@ -227,6 +227,7 @@
 										    <select name="referral" class="selectpicker form-control" title="Choose a course..." id="referral">
 								  			  <option value="advert" @if(old('referral') == "advert") selected  @endif>Advert</option>
 								  			  <option value="blog" @if(old('referral') == "blog") selected  @endif>Blog</option>
+								  			  <option value="a friend" @if(old('referral') == "a friend") selected  @endif>A friend</option>
 											</select>
 											@if ($errors->has('referral'))
 												<span class="help-block">

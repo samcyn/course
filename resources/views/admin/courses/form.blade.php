@@ -34,7 +34,15 @@
         {!! Form::date('start_date', null, ['class' => 'form-control']) !!}
         {!! $errors->first('start_date', '<p class="help-block">:message</p>') !!}
     </div>
-</div><div class="form-group {{ $errors->has('image_reference') ? 'has-error' : ''}}">
+</div>
+<div class="form-group {{ $errors->has('discount_percentage') ? 'has-error' : ''}}">
+    {!! Form::label('discount_percentage', 'Discount in percentage', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::text('discount_percentage', null, ['class' => 'form-control']) !!}
+        {!! $errors->first('discount_percentage', '<p class="help-block">:message</p>') !!}
+    </div>
+</div>
+<div class="form-group {{ $errors->has('image_reference') ? 'has-error' : ''}}">
     {!! Form::label('image_reference', 'Image Reference', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::text('image_reference', null, ['class' => 'form-control']) !!}

@@ -7728,3 +7728,522 @@ phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
   INFO [037ced28] Running /usr/bin/env echo "Branch master (at d70c081ad598b40853b7087e2e3e363a501a6cc5) deployed as release 20170403002041 by usmanirale" >> /var/www/html/courses/revisions.log as root@104.131.168.249
  DEBUG [037ced28] Command: cd /var/www/html/courses/releases && /usr/bin/env echo "Branch master (at d70c081ad598b40853b7087e2e3e363a501a6cc5) deployed as release 20170403002041 by usmanirale" >> /var/www/html/courses/revisions.log
   INFO [037ced28] Finished in 0.396 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-04-03 07:43:56 +0100 cap production deploy
+  INFO ---------------------------------------------------------------------------
+  INFO [aac41258] Running /usr/bin/env mkdir -p /tmp as root@104.131.168.249
+ DEBUG [aac41258] Command: /usr/bin/env mkdir -p /tmp
+  INFO [aac41258] Finished in 2.952 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-SwitchCourses-production-usmanirale.sh 0.0%
+  INFO Uploading /tmp/git-ssh-SwitchCourses-production-usmanirale.sh 100.0%
+  INFO [8708462a] Running /usr/bin/env chmod 700 /tmp/git-ssh-SwitchCourses-production-usmanirale.sh as root@104.131.168.249
+ DEBUG [8708462a] Command: /usr/bin/env chmod 700 /tmp/git-ssh-SwitchCourses-production-usmanirale.sh
+  INFO [8708462a] Finished in 0.394 seconds with exit status 0 (successful).
+  INFO [f2d93a0e] Running /usr/bin/env git ls-remote --heads git@gitlab.com:switchElites/switch-courses.git as root@104.131.168.249
+ DEBUG [f2d93a0e] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git ls-remote --heads git@gitlab.com:switchElites/switch-courses.git )
+ DEBUG [f2d93a0e] 	085d31fe2eb01d8cfdccbc020a86666fe5656838
+ DEBUG [f2d93a0e] 		
+ DEBUG [f2d93a0e] 	refs/heads/master
+  INFO [f2d93a0e] Finished in 16.815 seconds with exit status 0 (successful).
+  INFO [e400a715] Running /usr/bin/env mkdir -p /var/www/html/courses/shared /var/www/html/courses/releases as root@104.131.168.249
+ DEBUG [e400a715] Command: /usr/bin/env mkdir -p /var/www/html/courses/shared /var/www/html/courses/releases
+  INFO [e400a715] Finished in 0.612 seconds with exit status 0 (successful).
+ DEBUG [717651fc] Running [ -f /var/www/html/courses/current/REVISION ] as root@104.131.168.249
+ DEBUG [717651fc] Command: [ -f /var/www/html/courses/current/REVISION ]
+ DEBUG [717651fc] Finished in 0.408 seconds with exit status 0 (successful).
+ DEBUG [5e60107a] Running /usr/bin/env cat /var/www/html/courses/current/REVISION 2>/dev/null as root@104.131.168.249
+ DEBUG [5e60107a] Command: /usr/bin/env cat /var/www/html/courses/current/REVISION 2>/dev/null
+ DEBUG [5e60107a] 	d70c081ad598b40853b7087e2e3e363a501a6cc5
+ DEBUG [5e60107a] 	
+ DEBUG [5e60107a] Finished in 0.397 seconds with exit status 0 (successful).
+ DEBUG [eaa2a384] Running [ -f /var/www/html/courses/repo/HEAD ] as root@104.131.168.249
+ DEBUG [eaa2a384] Command: [ -f /var/www/html/courses/repo/HEAD ]
+ DEBUG [eaa2a384] Finished in 0.391 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/html/courses/repo
+ DEBUG [0322949a] Running if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [0322949a] Command: if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi
+ DEBUG [0322949a] Finished in 0.392 seconds with exit status 0 (successful).
+  INFO [0abad669] Running /usr/bin/env git remote update --prune as root@104.131.168.249
+ DEBUG [0abad669] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [0abad669] 	Fetching origin
+ DEBUG [0abad669] 	
+ DEBUG [0abad669] 	remote: Counting objects: 15, done.[K
+ DEBUG [0abad669] 	
+ DEBUG [0abad669] 	remote: Compressing objects:   7% (1/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  15% (2/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  23% (3
+ DEBUG [0abad669] 	/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  30% (4/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  38% (5/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  46% (6/13)   [K
+ DEBUG [0abad669] 	remote: Compressing 
+ DEBUG [0abad669] 	objects:  53% (7/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  61% (8/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  69% (9/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  76% (10/13
+ DEBUG [0abad669] 	)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  84% (11/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects:  92% (12/13)   [K
+ DEBUG [0abad669] 	remote: Compressing objects: 100% (13/13)   [K
+ DEBUG [0abad669] 	remote: Compressing 
+ DEBUG [0abad669] 	objects: 100% (13/13), done.[K
+ DEBUG [0abad669] 	
+ DEBUG [0abad669] 	remote: Total 15 (delta 10), reused 6 (delta 1)[K
+ DEBUG [0abad669] 	
+ DEBUG [0abad669] 	Unpacking objects:   6% (1/15)   
+ DEBUG [0abad669] 	Unpacking objects:  13% (2/15)   
+ DEBUG [0abad669] 	Unpacking objects:  20% (3/15)   
+ DEBUG [0abad669] 	Unpacking objects:  26% (4/15)   
+ DEBUG [0abad669] 	Unpacking objects:  33% (5/15)   
+ DEBUG [0abad669] 	Unpacking objects:  40% (6/15)   
+ DEBUG [0abad669] 	Unpacking objects:  46% (7/15)   
+ DEBUG [0abad669] 	Unpacking objects:  53% (8/15)   
+ DEBUG [0abad669] 	Unpacking objects:  60% (9/15)   
+ DEBUG [0abad669] 	Unpacking objects:  66% (10/15)   
+ DEBUG [0abad669] 	Unpacking objects:  73% (11/15)   
+ DEBUG [0abad669] 	Unpacking objects:  80% (12/15)   
+ DEBUG [0abad669] 	Unpacking objects:  86% (13/15)   
+ DEBUG [0abad669] 	Unpacking objects:  93% (14/15)   
+ DEBUG [0abad669] 	Unpacking objects: 100% (15/15)   
+ DEBUG [0abad669] 	Unpacking objects: 100% (15/15), done.
+ DEBUG [0abad669] 	
+ DEBUG [0abad669] 	From gitlab.com:switchElites/switch-courses
+ DEBUG [0abad669] 	
+ DEBUG [0abad669] 	   d70c081..085d31f  master     -> master
+ DEBUG [0abad669] 	
+  INFO [0abad669] Finished in 1.990 seconds with exit status 0 (successful).
+ DEBUG [f9132a38] Running if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [f9132a38] Command: if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi
+ DEBUG [f9132a38] Finished in 0.389 seconds with exit status 0 (successful).
+  INFO [27a4e35a] Running /usr/bin/env mkdir -p /var/www/html/courses/releases/20170403064421 as root@104.131.168.249
+ DEBUG [27a4e35a] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env mkdir -p /var/www/html/courses/releases/20170403064421 )
+  INFO [27a4e35a] Finished in 0.397 seconds with exit status 0 (successful).
+  INFO [e3466464] Running /usr/bin/env git archive master | tar -x -f - -C /var/www/html/courses/releases/20170403064421 as root@104.131.168.249
+ DEBUG [e3466464] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git archive master | tar -x -f - -C /var/www/html/courses/releases/20170403064421 )
+  INFO [e3466464] Finished in 0.529 seconds with exit status 0 (successful).
+ DEBUG [088d053f] Running if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [088d053f] Command: if test ! -d /var/www/html/courses/repo; then echo "Directory does not exist '/var/www/html/courses/repo'" 1>&2; false; fi
+ DEBUG [088d053f] Finished in 0.397 seconds with exit status 0 (successful).
+ DEBUG [f92736f8] Running /usr/bin/env git rev-list --max-count=1 master as root@104.131.168.249
+ DEBUG [f92736f8] Command: cd /var/www/html/courses/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-SwitchCourses-production-usmanirale.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [f92736f8] 	085d31fe2eb01d8cfdccbc020a86666fe5656838
+ DEBUG [f92736f8] 	
+ DEBUG [f92736f8] Finished in 0.397 seconds with exit status 0 (successful).
+ DEBUG [3b2639a6] Running if test ! -d /var/www/html/courses/releases/20170403064421; then echo "Directory does not exist '/var/www/html/courses/releases/20170403064421'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [3b2639a6] Command: if test ! -d /var/www/html/courses/releases/20170403064421; then echo "Directory does not exist '/var/www/html/courses/releases/20170403064421'" 1>&2; false; fi
+ DEBUG [3b2639a6] Finished in 0.401 seconds with exit status 0 (successful).
+  INFO [d2b30322] Running /usr/bin/env echo "085d31fe2eb01d8cfdccbc020a86666fe5656838" >> REVISION as root@104.131.168.249
+ DEBUG [d2b30322] Command: cd /var/www/html/courses/releases/20170403064421 && /usr/bin/env echo "085d31fe2eb01d8cfdccbc020a86666fe5656838" >> REVISION
+  INFO [d2b30322] Finished in 0.391 seconds with exit status 0 (successful).
+ DEBUG [d027998e] Running if test ! -d /var/www/html/courses/releases/20170403064421; then echo "Directory does not exist '/var/www/html/courses/releases/20170403064421'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [d027998e] Command: if test ! -d /var/www/html/courses/releases/20170403064421; then echo "Directory does not exist '/var/www/html/courses/releases/20170403064421'" 1>&2; false; fi
+ DEBUG [d027998e] Finished in 0.396 seconds with exit status 0 (successful).
+  INFO [00ba58b2] Running cp /var/www/html/courses/releases/20170403064421/.env.example /var/www/html/courses/releases/20170403064421/.env as root@104.131.168.249
+ DEBUG [00ba58b2] Command: cp /var/www/html/courses/releases/20170403064421/.env.example /var/www/html/courses/releases/20170403064421/.env
+  INFO [00ba58b2] Finished in 0.401 seconds with exit status 0 (successful).
+  INFO [9ceca375] Running /usr/bin/env composer install as root@104.131.168.249
+ DEBUG [9ceca375] Command: cd /var/www/html/courses/releases/20170403064421 && /usr/bin/env composer install
+ DEBUG [9ceca375] 	[30;43mDo not run Composer as root/super user! See https://getcomposer.org/root for details[39;49m
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	[32mLoading composer repositories with package information[39m
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	[32mInstalling dependencies (including require-dev) from lock file[39m
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	[32mPackage operations: 68 installs, 0 updates, 0 removals[39m
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/lexer[39m ([33mv1.0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/annotations[39m ([33mv1.4.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/cache[39m ([33mv1.6.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/collections[39m ([33mv1.4.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/inflector[39m ([33mv1.1.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/common[39m ([33mv2.7.2[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/dbal[39m ([33mv2.5.12[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32merusev/parsedown[39m ([33m1.6.2[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mjakub-onderka/php-console-color[39m ([33m0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/polyfill-mbstring[39m ([33mv1.3.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/var-dumper[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mpsr/log[39m ([33m1.0.2[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/debug[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/console[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mnikic/php-parser[39m ([33mv3.0.5[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mjakub-onderka/php-console-highlighter[39m ([33mv0.3.2[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdnoegel/php-xdg-base-dir[39m ([33m0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mpsy/psysh[39m ([33mv0.8.3[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mvlucas/phpdotenv[39m ([33mv2.4.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/css-selector[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mtijsverkoyen/css-to-inline-styles[39m ([33m2.2.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/routing[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/process[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/http-foundation[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/event-dispatcher[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/http-kernel[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/finder[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mswiftmailer/swiftmailer[39m ([33mv5.4.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mparagonie/random_compat[39m ([33mv2.0.10[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mramsey/uuid[39m ([33m3.6.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/translation[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mnesbot/carbon[39m ([33m1.22.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mmtdowling/cron-expression[39m ([33mv1.2.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mmonolog/monolog[39m ([33m1.22.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mleague/flysystem[39m ([33m1.0.37[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mlaravel/framework[39m ([33mv5.4.16[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mlaravel/tinker[39m ([33mv1.0.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mlaravelcollective/html[39m ([33mv5.4.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mleague/fractal[39m ([33m0.15.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mappzcoder/crud-generator[39m ([33mv2.0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mfzaninotto/faker[39m ([33mv1.6.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mhamcrest/hamcrest-php[39m ([33mv1.2.2[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mmockery/mockery[39m ([33m0.9.9[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mwebmozart/assert[39m ([33m1.2.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpdocumentor/reflection-common[39m ([33m1.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpdocumentor/type-resolver[39m ([33m0.2.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpdocumentor/reflection-docblock[39m ([33m3.1.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/php-token-stream[39m ([33m1.4.11[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msymfony/yaml[39m ([33mv3.2.6[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/version[39m ([33m2.0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/resource-operations[39m ([33m1.0.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/recursion-context[39m ([33m2.0.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/object-enumerator[39m ([33m2.0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/global-state[39m ([33m1.1.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/exporter[39m ([33m2.0.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/environment[39m ([33m2.0.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/diff[39m ([33m1.4.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/comparator[39m ([33m1.2.4[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/php-text-template[39m ([33m1.2.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mdoctrine/instantiator[39m ([33m1.0.5[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/phpunit-mock-objects[39m ([33m3.4.3[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/php-timer[39m ([33m1.0.9[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/php-file-iterator[39m ([33m1.4.2[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32msebastian/code-unit-reverse-lookup[39m ([33m1.0.1[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/php-code-coverage[39m ([33m4.0.7[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpspec/prophecy[39m ([33mv1.7.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mmyclabs/deep-copy[39m ([33m1.6.0[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	  - Installing [32mphpunit/phpunit[39m ([33m5.7.17[39m)
+ DEBUG [9ceca375] 	 Loading from cache
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/var-dumper suggests installing ext-symfony_debug ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/console suggests installing symfony/filesystem ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	psy/psysh suggests installing ext-pdo-sqlite (The doc command requires SQLite to work.)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	psy/psysh suggests installing hoa/console (A pure PHP readline implementation. You'll want this if your PHP install doesn't already support readline or libedit.)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/routing suggests installing symfony/config (For using the all-in-one router or any loader)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/routing suggests installing symfony/dependency-injection (For loading routes from a service)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/routing suggests installing symfony/expression-language (For using expression matching)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/event-dispatcher suggests installing symfony/dependency-injection ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/http-kernel suggests installing symfony/browser-kit ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/http-kernel suggests installing symfony/class-loader ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/http-kernel suggests installing symfony/config ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/http-kernel suggests installing symfony/dependency-injection ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	paragonie/random_compat suggests installing ext-libsodium (Provides a modern crypto API that can be used to generate random bytes.)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	ramsey/uuid suggests installing ext-libsodium (Provides the PECL libsodium extension for use with the SodiumRandomGenerator)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	ramsey/uuid suggests installing ext-uuid (Provides the PECL UUID extension for use with the PeclUuidTimeGenerator and PeclUuidRandomGenerator)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	ramsey/uuid suggests installing ircmaxell/random-lib (Provides RandomLib for use with the RandomLibAdapter)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	ramsey/uuid suggests installing moontoast/math (Provides support for converting UUID to 128-bit integer (in string form).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	ramsey/uuid suggests installing ramsey/uuid-console (A console application for generating UUIDs with ramsey/uuid)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	ramsey/uuid suggests installing ramsey/uuid-doctrine (Allows the use of Ramsey\Uuid\Uuid as Doctrine field type.)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	symfony/translation suggests installing symfony/config ()
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing aws/aws-sdk-php (Allow sending log messages to AWS services like DynamoDB)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing doctrine/couchdb (Allow sending log messages to a CouchDB server)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing ext-amqp (Allow sending log messages to an AMQP server (1.0+ required))
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing ext-mongo (Allow sending log messages to a MongoDB server)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing graylog2/gelf-php (Allow sending log messages to a GrayLog2 server)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing mongodb/mongodb (Allow sending log messages to a MongoDB server via PHP Driver)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing php-amqplib/php-amqplib (Allow sending log messages to an AMQP server using php-amqplib)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing php-console/php-console (Allow sending log messages to Google Chrome)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing rollbar/rollbar (Allow sending log messages to Rollbar)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing ruflin/elastica (Allow sending log messages to an Elastic Search server)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	monolog/monolog suggests installing sentry/sentry (Allow sending log messages to a Sentry server)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-aws-s3-v2 (Allows you to use S3 storage with AWS SDK v2)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-aws-s3-v3 (Allows you to use S3 storage with AWS SDK v3)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-azure (Allows you to use Windows Azure Blob storage)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-cached-adapter (Flysystem adapter decorator for metadata caching)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-copy (Allows you to use Copy.com storage)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-dropbox (Allows you to use Dropbox storage)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-eventable-filesystem (Allows you to use EventableFilesystem)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-rackspace (Allows you to use Rackspace Cloud Files)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-sftp (Allows you to use SFTP server storage via phpseclib)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-webdav (Allows you to use WebDAV storage)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/flysystem suggests installing league/flysystem-ziparchive (Allows you to use ZipArchive adapter)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing aws/aws-sdk-php (Required to use the SQS queue driver and SES mail driver (~3.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing guzzlehttp/guzzle (Required to use the Mailgun and Mandrill mail drivers and the ping methods on schedules (~6.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing league/flysystem-aws-s3-v3 (Required to use the Flysystem S3 driver (~1.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing league/flysystem-rackspace (Required to use the Flysystem Rackspace driver (~1.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing nexmo/client (Required to use the Nexmo transport (~1.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing pda/pheanstalk (Required to use the beanstalk queue driver (~3.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing predis/predis (Required to use the redis cache and queue drivers (~1.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing pusher/pusher-php-server (Required to use the Pusher broadcast driver (~2.0).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing symfony/dom-crawler (Required to use most of the crawler integration testing tools (~3.2).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	laravel/framework suggests installing symfony/psr-http-message-bridge (Required to psr7 bridging features (0.2.*).)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/fractal suggests installing pagerfanta/pagerfanta (Pagerfanta Paginator)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	league/fractal suggests installing zendframework/zend-paginator (Zend Framework Paginator)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	sebastian/global-state suggests installing ext-uopz (*)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	phpunit/phpunit-mock-objects suggests installing ext-soap (*)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	phpunit/php-code-coverage suggests installing ext-xdebug (^2.5.1)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	phpunit/phpunit suggests installing ext-xdebug (*)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	phpunit/phpunit suggests installing phpunit/php-invoker (~1.1)
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	[32mGenerating optimized autoload files[39m
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	> Illuminate\Foundation\ComposerScripts::postInstall
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	> php artisan optimize
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	Generating optimized class loader
+ DEBUG [9ceca375] 	
+ DEBUG [9ceca375] 	The compiled services file has been removed.
+ DEBUG [9ceca375] 	
+  INFO [9ceca375] Finished in 6.125 seconds with exit status 0 (successful).
+  INFO [00405888] Running /usr/bin/env composer dump-autoload -o as root@104.131.168.249
+ DEBUG [00405888] Command: cd /var/www/html/courses/releases/20170403064421 && /usr/bin/env composer dump-autoload -o
+ DEBUG [00405888] 	[30;43mDo not run Composer as root/super user! See https://getcomposer.org/root for details[39;49m
+ DEBUG [00405888] 	
+ DEBUG [00405888] 	[32mGenerating optimized autoload files[39m
+ DEBUG [00405888] 	
+  INFO [00405888] Finished in 1.229 seconds with exit status 0 (successful).
+  INFO [e39e96de] Running php /var/www/html/courses/releases/20170403064421/artisan key:generate as root@104.131.168.249
+ DEBUG [e39e96de] Command: php /var/www/html/courses/releases/20170403064421/artisan key:generate
+ DEBUG [e39e96de] 	[32mApplication key [base64:brrmgxlTxCumogDDnfSRKKwfmP1Pv+hn5VnDwj1hGQw=] set successfully.[39m
+ DEBUG [e39e96de] 	
+  INFO [e39e96de] Finished in 0.518 seconds with exit status 0 (successful).
+  INFO [d34980a9] Running chmod -R 777 /var/www/html/courses/releases/20170403064421/storage as root@104.131.168.249
+ DEBUG [d34980a9] Command: chmod -R 777 /var/www/html/courses/releases/20170403064421/storage
+  INFO [d34980a9] Finished in 0.395 seconds with exit status 0 (successful).
+  INFO [13d5035c] Running chmod -R 777 /var/www/html/courses/releases/20170403064421/bootstrap/cache as root@104.131.168.249
+ DEBUG [13d5035c] Command: chmod -R 777 /var/www/html/courses/releases/20170403064421/bootstrap/cache
+  INFO [13d5035c] Finished in 0.394 seconds with exit status 0 (successful).
+  INFO [e86d7a76] Running chmod -R 777 /var/www/html/courses/releases/20170403064421/vendor as root@104.131.168.249
+ DEBUG [e86d7a76] Command: chmod -R 777 /var/www/html/courses/releases/20170403064421/vendor
+  INFO [e86d7a76] Finished in 0.454 seconds with exit status 0 (successful).
+  INFO [5c93e391] Running chmod -R 777 /var/www/html/courses/releases/20170403064421/public as root@104.131.168.249
+ DEBUG [5c93e391] Command: chmod -R 777 /var/www/html/courses/releases/20170403064421/public
+  INFO [5c93e391] Finished in 0.399 seconds with exit status 0 (successful).
+  INFO [9863d0e8] Running php /var/www/html/courses/releases/20170403064421/artisan migrate as root@104.131.168.249
+ DEBUG [9863d0e8] Command: php /var/www/html/courses/releases/20170403064421/artisan migrate
+ DEBUG [9863d0e8] 	[32mNothing to migrate.[39m
+ DEBUG [9863d0e8] 	
+  INFO [9863d0e8] Finished in 0.534 seconds with exit status 0 (successful).
+  INFO [f6b3d24f] Running php /var/www/html/courses/releases/20170403064421/artisan db:seed --class=CoursesSeeder as root@104.131.168.249
+ DEBUG [f6b3d24f] Command: php /var/www/html/courses/releases/20170403064421/artisan db:seed --class=CoursesSeeder
+  INFO [f6b3d24f] Finished in 0.678 seconds with exit status 0 (successful).
+  INFO [a76a69c1] Running /usr/bin/env ln -s /var/www/html/courses/releases/20170403064421 /var/www/html/courses/releases/current as root@104.131.168.249
+ DEBUG [a76a69c1] Command: /usr/bin/env ln -s /var/www/html/courses/releases/20170403064421 /var/www/html/courses/releases/current
+  INFO [a76a69c1] Finished in 0.396 seconds with exit status 0 (successful).
+  INFO [2a1f31fa] Running /usr/bin/env mv /var/www/html/courses/releases/current /var/www/html/courses as root@104.131.168.249
+ DEBUG [2a1f31fa] Command: /usr/bin/env mv /var/www/html/courses/releases/current /var/www/html/courses
+  INFO [2a1f31fa] Finished in 0.397 seconds with exit status 0 (successful).
+ DEBUG [6ca55c02] Running /usr/bin/env ls -xtr /var/www/html/courses/releases as root@104.131.168.249
+ DEBUG [6ca55c02] Command: /usr/bin/env ls -xtr /var/www/html/courses/releases
+ DEBUG [6ca55c02] 	20170402220254
+ DEBUG [6ca55c02] 		
+ DEBUG [6ca55c02] 	20170403000831
+ DEBUG [6ca55c02] 		
+ DEBUG [6ca55c02] 	20170403001133
+ DEBUG [6ca55c02] 		
+ DEBUG [6ca55c02] 	20170403001746
+ DEBUG [6ca55c02] 		
+ DEBUG [6ca55c02] 	20170403002041
+ DEBUG [6ca55c02] 	
+ DEBUG [6ca55c02] 	20170403064421
+ DEBUG [6ca55c02] 	
+ DEBUG [6ca55c02] Finished in 0.573 seconds with exit status 0 (successful).
+  INFO Keeping 5 of 6 deployed releases on 104.131.168.249
+  INFO [c0be3667] Running /usr/bin/env rm -rf /var/www/html/courses/releases/20170402220254 as root@104.131.168.249
+ DEBUG [c0be3667] Command: /usr/bin/env rm -rf /var/www/html/courses/releases/20170402220254
+  INFO [c0be3667] Finished in 0.679 seconds with exit status 0 (successful).
+ DEBUG [412bc882] Running if test ! -d /var/www/html/courses/releases; then echo "Directory does not exist '/var/www/html/courses/releases'" 1>&2; false; fi as root@104.131.168.249
+ DEBUG [412bc882] Command: if test ! -d /var/www/html/courses/releases; then echo "Directory does not exist '/var/www/html/courses/releases'" 1>&2; false; fi
+ DEBUG [412bc882] Finished in 0.403 seconds with exit status 0 (successful).
+  INFO [af376b18] Running /usr/bin/env echo "Branch master (at 085d31fe2eb01d8cfdccbc020a86666fe5656838) deployed as release 20170403064421 by usmanirale" >> /var/www/html/courses/revisions.log as root@104.131.168.249
+ DEBUG [af376b18] Command: cd /var/www/html/courses/releases && /usr/bin/env echo "Branch master (at 085d31fe2eb01d8cfdccbc020a86666fe5656838) deployed as release 20170403064421 by usmanirale" >> /var/www/html/courses/revisions.log
+  INFO [af376b18] Finished in 0.395 seconds with exit status 0 (successful).

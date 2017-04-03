@@ -112,6 +112,7 @@
 									   </div>
 										<div class="form-group payment_method">
 										    <label class="radio-inline"><input type="radio" name="method"><img src="/assets/img/bank.png"> Bank Transfer</label>
+
 											<label class="radio-inline"><input type="radio" name="method" onclick="payWithPaystack({{$applicant->id}})">ATM Card</label>
 										</div>
 										<div>

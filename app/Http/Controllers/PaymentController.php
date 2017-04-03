@@ -38,11 +38,15 @@ class PaymentController extends Controller
 
         $reference = uniqid(24);
 
+        if($applicant->course->discount_percentage > 0)
+            $amount = $applicant->course->price - ($applicant->course->price * ($applicant->course->discount_percentage/100));
+        else
+            $amount = $applicant->course->price;
 
         $data = [
             'applicant_id' => $applicant->id,
             'course_id' => $applicant->course->id,
-            'amount' => $applicant->course->price,
+            'amount' => $amount,
             'reference' => $reference,
             'status' => 'pending'
         ];

@@ -54,29 +54,19 @@
 				</div>
 			</section>
 
-            <section class="faq-contact">
+			<section class="faq-contact hr-white">
                 <div class="container">
-					<h4 class="hr-white text-center">Not satisfy? </h4>
-                    <h3 class="text-center heading hr-white m-t-0">Contact Us</h3>
+					<h4 class="hr-white text-center">Not satisfied ?</h4>
+                    <h3 class="text-center heading  m-t-0">Contact Us</h3>
 					<br><br>
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
-							<form>
-								<div class="form-group">
-									<label for="email">Email address</label>
-									<input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-									<small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-								</div>
-								<div class="form-group">
-									<label for="subject">Subject</label>
-									<input type="text" class="form-control" id="subject" placeholder="Subject">
-								</div>
-								<div class="form-group">
-									<label for="comment">Comment</label>
-									<textarea class="form-control" id="comment" rows="3"></textarea>
-								</div>
-								<button type="submit" class="btn btn_brand">Submit</button>
-							</form>
+							<ul class="list_style_none text-center f-15">
+								<li class="m-b-10"><img src="/assets/img/fav/email.png"> info@switch.ng</li>
+								<li class="m-b-10"><img src="/assets/img/fav/phone.png"> +2349089667871</li>
+								<li><img src="/assets/img/fav/location.png"> 1st Floor Adepate House<br> 42 Montgomery Road Yaba Lagos Nigeria.</li>
+							</ul>
+					
 						</div>
                     </div>
                 </div>

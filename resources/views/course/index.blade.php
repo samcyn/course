@@ -26,4 +26,27 @@
 					</div>
 				</div>
 			</section>
+			<footer class="footer dis-flex clearfix height-120">
+				<div class="container">
+					<!--navbar begins here-->
+					<ul class="p-l-0">
+						<li>
+							<img src="assets/img/logo/logo.svg" width="150px">
+							<span class="copyright">© {{date('Y')}} Switch All rights reserved</span>
+						</li>
+						<ul class="pull-right">
+							<!--<li>
+								<a href="#">Tell a Friend</a>
+							</li>-->
+							<li>
+								<a href="about_us.html">About</a>
+							</li>
+							<li>
+								<a href="faq.html">FAQs</a>
+							</li>
+						</ul>
+					</ul>
+					<!--navbar ends here-->
+				</div>
+			</footer>
 @endsection

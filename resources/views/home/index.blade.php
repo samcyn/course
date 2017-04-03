@@ -156,7 +156,7 @@
 					<ul class="p-l-0">
 						<li>
 							<img src="assets/img/logo/logo.svg" width="150px">
-							<span class="copyright">© 2016 Great Simple All rights reserved</span>
+							<span class="copyright">© {{date('Y')}} Switch All rights reserved</span>
 						</li>
 						<ul class="pull-right">
 							{{--<li>

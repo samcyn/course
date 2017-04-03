@@ -172,8 +172,8 @@
 										<div class="form-group">
 										    <label for="prefered_session">Preferred training session</label>
 										    <select name="prefered_session" class="selectpicker form-control" title="Choose a course..." id="prefered_session">
-								  			  <option value="evening" @if(old('prefered_session') == "evening") selected  @endif>Evening</option>
-											  <option value="weekend" @if(old('prefered_session') == "weekend") selected  @endif>Weekend</option>
+								  			  <option value="weekdays" @if(old('prefered_session') == "weekdays") selected  @endif>Weekdays</option>
+											  <option value="weekends" @if(old('prefered_session') == "weekends") selected  @endif>Weekends</option>
 											</select>
 											@if ($errors->has('prefered_session'))
 												<span class="help-block">
@@ -276,7 +276,22 @@
 	                                <img src="/assets/img/{{$course->image_reference}}">
 	                            </div>
 	                            <div class="content text-center">
-	                            	<p class="course_price">NGN {{number_format($course->price)}}</p>
+	                            	@if($course->discount_percentage > 0)
+										<?php $ds_price = $course->price - ($course->price * ($course->discount_percentage/100));?>
+	                            		<p class="course_price">NGN {{number_format($ds_price)}}</p>
+									@else
+										<p class="course_price">NGN {{number_format($course->price)}}</p>
+									@endif
+									@if($course->discount_percentage > 0)
+										<p class="course_price_ds m-b-0 m-t-0">
+											<span style="color: #ff4d4d; text-decoration:line-through; margin-right: 5px;">
+												
+												<span style="color: #778aa1;">NGN {{number_format($course->price)}}</span>
+											</span>
+										
+										 {{$course->discount_percentage}}% discount
+										</p>
+									@endif
 	                                <h3 class="course_title2">{{$course->name}}</h3>
 	                                <p class="course_duration">
 	                                	<span>

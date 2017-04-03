@@ -186,7 +186,22 @@
 	                                <img src="/assets/img/{{$applicant->course->image_reference}}">
 	                            </div>
 	                            <div class="content text-center">
-	                            	<p class="course_price">NGN {{number_format($applicant->course->price)}}</p>
+	                            	@if($applicant->course->discount_percentage > 0)
+										<?php $ds_price = $applicant->course->price - ($applicant->course->price * ($applicant->course->discount_percentage/100));?>
+	                            		<p class="course_price">NGN {{number_format($ds_price)}}</p>
+									@else
+										<p class="course_price">NGN {{number_format($applicant->course->price)}}</p>
+									@endif
+									@if($applicant->course->discount_percentage > 0)
+										<p class="course_price_ds m-b-0 m-t-0">
+											<span style="color: #ff4d4d; text-decoration:line-through; margin-right: 5px;">
+												
+												<span style="color: #778aa1;">NGN {{number_format($applicant->course->price)}}</span>
+											</span>
+										
+										 {{$applicant->course->discount_percentage}}% discount
+										</p>
+									@endif
 	                                <h3 class="course_title2">{{$applicant->course->name}}</h3>
 	                                <p class="course_duration">
 	                                	<span>

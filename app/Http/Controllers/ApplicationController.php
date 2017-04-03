@@ -34,7 +34,9 @@ class ApplicationController extends Controller
             'prefered_session' => 'required',
             'why_course' => 'required',
             'prev_training' => 'required',
-            'employment_status' => 'required'
+            'employment_status' => 'required',
+            'referral' => 'required',
+            'computer_proficiency' => 'required',
         ]);
 
         $course = $this->course->getCourse($slug);

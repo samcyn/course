@@ -198,6 +198,7 @@
 										    <label for="employment_status">What is your employment status?</label>
 										    <select name="employment_status" class="selectpicker form-control" title="Choose a course..." id="employment_status">
 								  			  <option value="employed" @if(old('employment_status') == "employed") selected  @endif>Employed</option>
+											  <option value="self-employed" @if(old('employment_status') == "self-employed") selected  @endif>Self Employed</option>
 											  <option value="unemployed" @if(old('employment_status') == "unemployed") selected  @endif>Unemployed</option>
 											</select>
 											@if ($errors->has('employment_status'))

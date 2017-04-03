@@ -6,13 +6,13 @@
     </div>
 </div><div class="form-group {{ $errors->has('description') ? 'has-error' : ''}}">
     {!! Form::label('description', 'Description', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
+    <div class="col-md-8">
         {!! Form::textarea('description', null, ['class' => 'form-control']) !!}
         {!! $errors->first('description', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('short_desc') ? 'has-error' : ''}}">
     {!! Form::label('short_desc', 'Short Desc', ['class' => 'col-md-4 control-label']) !!}
-    <div class="col-md-6">
+    <div class="col-md-8">
         {!! Form::textarea('short_desc', null, ['class' => 'form-control']) !!}
         {!! $errors->first('short_desc', '<p class="help-block">:message</p>') !!}
     </div>

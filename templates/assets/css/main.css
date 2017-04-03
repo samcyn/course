@@ -386,6 +386,9 @@ footer .navbar-default .navbar-nav>.active>a:focus
 }
 
 /*Margin */
+.f-15{
+  font-size: 15px;
+}
 .m-b-0{
 	margin-bottom: 0px;
 }
@@ -399,6 +402,10 @@ footer .navbar-default .navbar-nav>.active>a:focus
 
 .m-t-80{
 	margin-top: 80px;
+}
+
+.m-b-10{
+	margin-bottom: 10px;
 }
 
 .m-b-80{

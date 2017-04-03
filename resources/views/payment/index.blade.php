@@ -1,11 +1,60 @@
-@extends('layouts.switch')
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="csrf-token" content="{{ csrf_token() }}">
+		<title>SWITCH! Immersive Courses</title>
 
-@section('content')
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/css/bootstrap-select.min.css">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="/assets/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+		<link rel="stylesheet" type="text/css" href="/assets/css/responsive.css">
+		<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+	</head>
+	<body data="course">
+		<div class="wrapper clearfix m-b-80">
+			<header class="clearfix dis-flex">
+				<div class="container">
+					<!--navbar begins here-->
+					<nav class="navbar navbar-default m-b-0" role="navigation" id="main-nav">
+						<div class="container animated">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header" style="padding-top: 3px;">
+								<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand animated" href="/">
+									<img src="/assets/img/logo/logo.svg" alt="Switch" class="logo-default">
+								</a>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse navbar-ex1-collapse">
+								<ul class="nav navbar-nav navbar-right main-nav-list">
+									<li class="active"><a href="/courses">Courses</a></li>
+									<li class="animated"><a href="/about-us">About</a></li>
+									<li class="animated"><a href="/faq">FAQ</a></li>
+								</ul>
+							</div><!-- /.navbar-collapse -->
+						</div>
+					</nav>
+				</div>
+			</header>
 <section class="forms clearfix">
 				<div class="container" style="margin: 0 auto;">
 					<section class="intros clearfix p-t-60">
 						<div class="col-md-7">
-							<h3 class="m-t-0">{{$applicant->course->name}}</h3>
+							<h3 class="m-t-0 course_title">{{$applicant->course->name}}</h3>
 							<div class="wizard">
 								<div class="wizard-inner">
 					               
@@ -134,11 +183,11 @@
 						<div class="col-md-4 col-md-offset-1">
 							<div class="card" style="border: 1px solid #EEE;">
 	                            <div class="header text-center dis-flex" style="border: none;">
-	                                <img src="/assets/img/frontend-icon@2x.png">
+	                                <img src="/assets/img/{{$applicant->course->image_reference}}">
 	                            </div>
 	                            <div class="content text-center">
 	                            	<p class="course_price">NGN {{number_format($applicant->course->price)}}</p>
-	                                <h3 class="course_title">{{$applicant->course->name}}</h3>
+	                                <h3 class="course_title2">{{$applicant->course->name}}</h3>
 	                                <p class="course_duration">
 	                                	<span>
 	                                		<i class=""></i>
@@ -152,7 +201,44 @@
 	                            </div>
 	                       </div>
 						</div>
+					
 					</section>
 				</div>
 			</section>
-@endsection
+</div>
+		<script src="https://js.paystack.co/v1/inline.js"></script>
+		<!-- jQuery -->
+		<script src="/assets/js/jquery.js"></script>
+		<!-- Bootstrap JavaScript -->
+		<script src="/assets/js/bootstrap.min.js"></script>
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.2/js/bootstrap-select.min.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("input[type='radio']").on("change", function(){
+					//console.log($(this).parent());
+					$(".payment_method").find(".current").removeClass("current");
+					$(this).parent().addClass("current");
+					
+				});
+
+				    $("#uba").hide();
+					$("#gtbank").hide();
+
+
+					$("#selectedBank").change(function(){
+						$("#uba").hide();
+					$("#gtbank").hide();
+						if($(this).val() == "gtbank")
+							$("#gtbank").show();
+						
+						if($(this).val() == "uba")
+							$("#uba").show();
+					});
+			});
+		</script>
+		<script src="/js/payment.js"></script>
+		
+	</body>
+</html>

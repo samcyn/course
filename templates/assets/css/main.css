@@ -276,6 +276,10 @@ body[data="index"] .navbar-default .navbar-nav>.active>a:focus{
   color: #778aa1;
 }
 
+.card .content .course_price_ds{
+  font-size: 14px;
+}
+
 .card .content .course_title,
 .intros .course_title
 {
@@ -393,7 +397,7 @@ footer .navbar-default .navbar-nav>.active>a:focus
 	margin-bottom: 0px;
 }
 .m-t-0{
-	margin-top: 0px;
+	margin-top: 0px !important;
 }
 
 .m-t-20{

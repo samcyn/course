@@ -1,8 +1,8 @@
 @extends('layouts.new-switch')
 
 @section('content')
- 	<section class="clearfix height-350p" style="background-image: url('assets/img/banner.png'); 
-			background-repeat: no-repeat; background-size: cover; background-position: 0px -150px;">
+ 	<section class="clearfix height-350p" style="background-image: url('assets/img/banner.jpg'); 
+			background-repeat: no-repeat; background-size: cover; background-position: 0px -10px;">
 				<div class="container">
 					
 				</div>
@@ -35,6 +35,7 @@
                             </p>
                         </div>
                         <div class="col-md-4">
+                            <!--
                             <h4 class="hr-blue">Related Question</h4>
                             <ul class="list_style_none ">
                                 <li ><a href="faq.html">Am I eligible?</a></li>
@@ -48,7 +49,7 @@
                                     <a href="faq.html">How much does it cost?</a>
                                 </li>
                                 
-                            </ul>
+                            </ul>-->
                         </div>
                     </div>
 				</div>

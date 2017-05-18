@@ -34,6 +34,7 @@
                                         <th>First Name</th>
                                         <th>Last Name</th>
                                         <th>Email</th>
+                                        <th>Phone</th>
                                         <th>Course</th>
                                         <th>Payment status</th>
                                         <th>Actions</th>
@@ -46,6 +47,7 @@
                                         <td>{{ $item->first_name }}</td>
                                         <td>{{ $item->last_name }}</td>
                                         <td>{{ $item->email }}</td>
+                                        <td>{{ $item->phone }}</td>
                                         <td>{{ $item->course->name }}</td>
                                         <td>{{ $item->payment_status }}</td>
                                         <td>

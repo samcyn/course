@@ -64,7 +64,7 @@
                         <div class="col-md-8 col-md-offset-2">
 							<ul class="list_style_none text-center f-15">
 								<li class="m-b-10"><img src="/assets/img/fav/email.png"> info@switch.ng</li>
-								<li class="m-b-10"><img src="/assets/img/fav/phone.png"> +2349089667871</li>
+								<li class="m-b-10"><img src="/assets/img/fav/phone.png"> +2349094639041</li>
 								<li><img src="/assets/img/fav/location.png"> 1st Floor Adepate House<br> 42 Montgomery Road Yaba Lagos Nigeria.</li>
 							</ul>
 					
